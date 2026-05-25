@@ -148,14 +148,7 @@ export default function QuantPage() {
       </section>
 
       {/* CTA */}
-      <section style={{ padding: "60px 0 80px", backgroundColor: "#0A0A0A", borderTop: "1px solid #1C1C1C", textAlign: "center" }}>
-        <div className="section-container">
-          <p style={{ color: "#6B7280", fontSize: "0.9rem", marginBottom: "20px" }}>Interested in the research behind these systems?</p>
-          <Link href="/blog" id="quant-blog-cta" className="btn-primary" style={{ display: "inline-flex" }}>
-            <BookOpen size={15} /> Read Research Notes <ArrowRight size={14} />
-          </Link>
-        </div>
-      </section>
+     
     </div>
   );
 }

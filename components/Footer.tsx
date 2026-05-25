@@ -75,7 +75,7 @@ export default function Footer() {
                 { href: "/quant", label: "Quant" },
                 { href: "/engineering", label: "Engineering" },
                 { href: "/projects", label: "Projects" },
-                { href: "/blog", label: "Blog" },
+                /*{ href: "/blog", label: "Blog" },*/
                 { href: "/resume", label: "Resume" },
                 { href: "/contact", label: "Contact" },
               ].map((link) => (

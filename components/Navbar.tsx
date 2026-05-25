@@ -11,7 +11,7 @@ const navLinks = [
   { href: "/quant", label: "Quant" },
   { href: "/engineering", label: "Engineering" },
   { href: "/projects", label: "Projects" },
-  { href: "/blog", label: "Blog" },
+ /* { href: "/blog", label: "Blog" },*/
   { href: "/resume", label: "Resume" },
   { href: "/contact", label: "Contact" },
 ];
@@ -114,37 +114,7 @@ export default function Navbar() {
           </div>
 
           {/* Contact CTA */}
-          <div style={{ display: "flex", alignItems: "center", gap: "12px" }} className="hidden-mobile">
-            <Link
-              href="/contact"
-              id="nav-cta-contact"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "6px",
-                padding: "7px 18px",
-                borderRadius: "7px",
-                fontSize: "0.8rem",
-                fontWeight: 600,
-                color: "#FFFFFF",
-                background: "#6E8EAD",
-                border: "1px solid #6E8EAD",
-                textDecoration: "none",
-                transition: "all 0.2s",
-                letterSpacing: "0.01em",
-              }}
-              onMouseEnter={(e) => {
-                (e.currentTarget as HTMLElement).style.background = "#5A7A9A";
-                (e.currentTarget as HTMLElement).style.borderColor = "#5A7A9A";
-              }}
-              onMouseLeave={(e) => {
-                (e.currentTarget as HTMLElement).style.background = "#6E8EAD";
-                (e.currentTarget as HTMLElement).style.borderColor = "#6E8EAD";
-              }}
-            >
-              Contact
-            </Link>
-          </div>
+          
 
           {/* Mobile hamburger */}
           <button

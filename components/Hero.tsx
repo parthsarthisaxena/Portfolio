@@ -197,7 +197,7 @@ export default function Hero() {
           >
             {[
               { value: "9+", label: "Quant Projects" },
-              { value: "1.84", label: "Best Sharpe Ratio" },
+              { value: "8.2", label: "Best Sharpe Ratio" },
               { value: "300+", label: "DSA Problems" },
               { value: "C++/Python", label: "Core Stack" },
             ].map((stat) => (
