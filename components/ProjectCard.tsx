@@ -62,17 +62,17 @@ export default function ProjectCard({
               alignItems: "center",
               justifyContent: "center",
               background: isQuant
-                ? "rgba(100,255,218,0.08)"
-                : "rgba(123,158,255,0.08)",
+                ? "rgba(110, 142, 173,0.10)"
+                : "rgba(255,255,255,0.06)",
               border: isQuant
-                ? "1px solid rgba(100,255,218,0.2)"
-                : "1px solid rgba(123,158,255,0.2)",
+                ? "1px solid rgba(110, 142, 173,0.20)"
+                : "1px solid rgba(255,255,255,0.10)",
             }}
           >
             {isQuant ? (
-              <TrendingUp size={16} color="#64FFDA" />
+              <TrendingUp size={16} color="#6E8EAD" />
             ) : (
-              <Code2 size={16} color="#7B9EFF" />
+              <Code2 size={16} color="#6E8EAD" />
             )}
           </div>
 
@@ -86,7 +86,7 @@ export default function ProjectCard({
                 id={`project-github-${project.slug}`}
                 onClick={(e) => e.stopPropagation()}
                 style={{
-                  color: "#64748B",
+                  color: "#6B7280",
                   transition: "color 0.2s",
                   display: "flex",
                   alignItems: "center",
@@ -104,7 +104,7 @@ export default function ProjectCard({
                 id={`project-demo-${project.slug}`}
                 onClick={(e) => e.stopPropagation()}
                 style={{
-                  color: "#64748B",
+                  color: "#6B7280",
                   transition: "color 0.2s",
                   display: "flex",
                   alignItems: "center",
@@ -135,7 +135,7 @@ export default function ProjectCard({
             fontFamily: "'Inter', sans-serif",
             fontWeight: 600,
             fontSize: "1rem",
-            color: "#E2E8F0",
+            color: "#FFFFFF",
             marginBottom: "8px",
             lineHeight: 1.4,
           }}
@@ -146,7 +146,7 @@ export default function ProjectCard({
         {/* Description */}
         <p
           style={{
-            color: "#94A3B8",
+            color: "#9CA3AF",
             fontSize: "0.85rem",
             lineHeight: 1.6,
             marginBottom: "16px",
@@ -166,7 +166,7 @@ export default function ProjectCard({
               padding: "10px 12px",
               background: "rgba(100,255,218,0.04)",
               borderRadius: "6px",
-              border: "1px solid rgba(100,255,218,0.08)",
+              border: "1px solid rgba(110, 142, 173,0.10)",
               flexWrap: "wrap",
             }}
           >
@@ -177,12 +177,12 @@ export default function ProjectCard({
                     fontFamily: "'JetBrains Mono', monospace",
                     fontSize: "0.9rem",
                     fontWeight: 600,
-                    color: "#64FFDA",
+                    color: "#6E8EAD",
                   }}
                 >
                   {project.metrics.sharpeRatio}
                 </div>
-                <div style={{ fontSize: "0.68rem", color: "#64748B" }}>
+                <div style={{ fontSize: "0.68rem", color: "#6B7280" }}>
                   Sharpe
                 </div>
               </div>
@@ -199,7 +199,7 @@ export default function ProjectCard({
                 >
                   {project.metrics.maxDrawdown}
                 </div>
-                <div style={{ fontSize: "0.68rem", color: "#64748B" }}>
+                <div style={{ fontSize: "0.68rem", color: "#6B7280" }}>
                   Max DD
                 </div>
               </div>
@@ -216,7 +216,7 @@ export default function ProjectCard({
                 >
                   {project.metrics.winRate}
                 </div>
-                <div style={{ fontSize: "0.68rem", color: "#64748B" }}>
+                <div style={{ fontSize: "0.68rem", color: "#6B7280" }}>
                   Win Rate
                 </div>
               </div>
@@ -228,12 +228,12 @@ export default function ProjectCard({
                     fontFamily: "'JetBrains Mono', monospace",
                     fontSize: "0.9rem",
                     fontWeight: 600,
-                    color: "#7B9EFF",
+                    color: "#6E8EAD",
                   }}
                 >
                   {project.metrics.annualizedReturn}
                 </div>
-                <div style={{ fontSize: "0.68rem", color: "#64748B" }}>
+                <div style={{ fontSize: "0.68rem", color: "#6B7280" }}>
                   Ann. Return
                 </div>
               </div>
@@ -256,7 +256,7 @@ export default function ProjectCard({
             <span
               style={{
                 fontSize: "0.68rem",
-                color: "#64748B",
+                color: "#6B7280",
                 padding: "3px 8px",
               }}
             >

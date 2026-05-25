@@ -20,7 +20,7 @@ function SkeletonBar() {
       style={{
         height: "100%",
         width: "100%",
-        background: "linear-gradient(90deg, #1E293B 25%, #263348 50%, #1E293B 75%)",
+        background: "linear-gradient(90deg, #1C1C1C 25%, #262626 50%, #1C1C1C 75%)",
         backgroundSize: "200% 100%",
         animation: "shimmer 1.5s infinite",
         borderRadius: "6px",
@@ -72,7 +72,7 @@ export default function LeetCodeStats() {
           style={{
             fontFamily: "'JetBrains Mono', monospace",
             fontSize: "0.72rem",
-            color: "#7B9EFF",
+            color: "#6E8EAD",
             letterSpacing: "0.1em",
           }}
         >
@@ -86,14 +86,14 @@ export default function LeetCodeStats() {
             background: "none",
             border: "none",
             cursor: loading ? "not-allowed" : "pointer",
-            color: "#475569",
+            color: "#6B7280",
             display: "flex",
             alignItems: "center",
             padding: "4px",
             transition: "color 0.2s",
           }}
-          onMouseEnter={(e) => (e.currentTarget.style.color = "#7B9EFF")}
-          onMouseLeave={(e) => (e.currentTarget.style.color = "#475569")}
+          onMouseEnter={(e) => (e.currentTarget.style.color = "#6E8EAD")}
+          onMouseLeave={(e) => (e.currentTarget.style.color = "#6B7280")}
         >
           <RefreshCw
             size={13}
@@ -118,17 +118,17 @@ export default function LeetCodeStats() {
                   fontFamily: "'JetBrains Mono', monospace",
                   fontWeight: 700,
                   fontSize: "2.8rem",
-                  color: "#E2E8F0",
+                  color: "#FFFFFF",
                   lineHeight: 1,
                   marginBottom: "4px",
                 }}
               >
                 {data?.total ?? "—"}
               </div>
-              <div style={{ color: "#64748B", fontSize: "0.82rem", display: "flex", alignItems: "center", gap: "6px" }}>
+              <div style={{ color: "#6B7280", fontSize: "0.82rem", display: "flex", alignItems: "center", gap: "6px" }}>
                 Problems solved on LeetCode
                 {data?.fallback && (
-                  <span style={{ fontSize: "0.65rem", color: "#475569", fontFamily: "'JetBrains Mono', monospace" }}>
+                  <span style={{ fontSize: "0.65rem", color: "#6B7280", fontFamily: "'JetBrains Mono', monospace" }}>
                     (cached)
                   </span>
                 )}
@@ -156,7 +156,7 @@ export default function LeetCodeStats() {
                   style={{
                     fontFamily: "'JetBrains Mono', monospace",
                     fontSize: "0.72rem",
-                    color: "#64748B",
+                    color: "#6B7280",
                   }}
                 >
                   {loading ? "—" : (data?.[d.key] ?? 0)}
@@ -165,7 +165,7 @@ export default function LeetCodeStats() {
               <div
                 style={{
                   height: "5px",
-                  background: "#1E293B",
+                  background: "#171717",
                   borderRadius: "999px",
                   overflow: "hidden",
                 }}
@@ -193,21 +193,21 @@ export default function LeetCodeStats() {
           <div
             style={{
               padding: "10px 14px",
-              background: "#05050A",
+              background: "#0A0A0A",
               borderRadius: "8px",
-              border: "1px solid #1E293B",
+              border: "1px solid #1C1C1C",
               marginBottom: "16px",
               display: "flex",
               justifyContent: "space-between",
               alignItems: "center",
             }}
           >
-            <span style={{ fontSize: "0.78rem", color: "#64748B" }}>Global Ranking</span>
+            <span style={{ fontSize: "0.78rem", color: "#6B7280" }}>Global Ranking</span>
             <span
               style={{
                 fontFamily: "'JetBrains Mono', monospace",
                 fontSize: "0.78rem",
-                color: "#7B9EFF",
+                color: "#6E8EAD",
                 fontWeight: 600,
               }}
             >
@@ -232,7 +232,7 @@ export default function LeetCodeStats() {
             alignItems: "center",
             justifyContent: "space-between",
             paddingTop: "14px",
-            borderTop: "1px solid #1E293B",
+            borderTop: "1px solid #1C1C1C",
           }}
         >
           <a

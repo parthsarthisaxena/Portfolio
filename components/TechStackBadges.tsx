@@ -3,23 +3,23 @@
 const techStack = [
   {
     category: "Languages",
-    color: "#64FFDA",
-    items: ["C++17/20", "Python", "SQL"],
+    color: "#6E8EAD",
+    items: ["C++", "Python", "SQL"],
   },
   {
     category: "Backend & APIs",
-    color: "#7B9EFF",
-    items: ["FastAPI", "REST", "PostgreSQL", "Redis"],
+    color: "#6E8EAD",
+    items: ["FastAPI", "REST", "PostgreSQL"],
   },
   {
     category: "Tools & Infra",
-    color: "#7B9EFF",
-    items: ["Docker", "Git", "Linux", "CMake"],
+    color: "#6E8EAD",
+    items: ["Docker", "Git"],
   },
   {
     category: "Libraries",
-    color: "#64FFDA",
-    items: ["NumPy", "pandas", "scikit-learn", "Boost", "Google Test"],
+    color: "#6E8EAD",
+    items: ["NumPy", "pandas", "scikit-learn"],
   },
 ];
 
@@ -30,7 +30,7 @@ export default function TechStackBadges() {
         style={{
           fontFamily: "'JetBrains Mono', monospace",
           fontSize: "0.72rem",
-          color: "#7B9EFF",
+          color: "#6E8EAD",
           letterSpacing: "0.1em",
           marginBottom: "28px",
         }}
@@ -44,7 +44,7 @@ export default function TechStackBadges() {
               style={{
                 fontSize: "0.68rem",
                 fontFamily: "'JetBrains Mono', monospace",
-                color: "#475569",
+                color: "#6B7280",
                 letterSpacing: "0.08em",
                 marginBottom: "10px",
                 textTransform: "uppercase",

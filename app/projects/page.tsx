@@ -16,7 +16,7 @@ export default function ProjectsPage() {
             style={{
               fontFamily: "'JetBrains Mono', monospace",
               fontSize: "0.75rem",
-              color: "#64FFDA",
+              color: "#6E8EAD",
               letterSpacing: "0.1em",
               marginBottom: "12px",
             }}
@@ -28,7 +28,7 @@ export default function ProjectsPage() {
               fontFamily: "'Inter', sans-serif",
               fontWeight: 700,
               fontSize: "clamp(2rem, 4vw, 2.8rem)",
-              color: "#E2E8F0",
+              color: "#FFFFFF",
               letterSpacing: "-0.03em",
               marginBottom: "16px",
             }}
@@ -37,7 +37,7 @@ export default function ProjectsPage() {
           </h1>
           <p
             style={{
-              color: "#94A3B8",
+              color: "#9CA3AF",
               fontSize: "0.95rem",
               lineHeight: 1.7,
               maxWidth: "540px",

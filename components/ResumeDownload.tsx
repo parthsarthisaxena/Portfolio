@@ -6,8 +6,8 @@ export default function ResumeDownload() {
       id="resume-download"
       style={{
         padding: "100px 0",
-        backgroundColor: "#080810",
-        borderTop: "1px solid #1E293B",
+        backgroundColor: "#0A0A0A",
+        borderTop: "1px solid #1C1C1C",
       }}
     >
       <div className="section-container">
@@ -16,7 +16,7 @@ export default function ResumeDownload() {
             style={{
               fontFamily: "'JetBrains Mono', monospace",
               fontSize: "0.75rem",
-              color: "#64FFDA",
+              color: "#6E8EAD",
               letterSpacing: "0.1em",
               marginBottom: "12px",
             }}
@@ -28,13 +28,13 @@ export default function ResumeDownload() {
               fontFamily: "'Inter', sans-serif",
               fontWeight: 700,
               fontSize: "clamp(1.8rem, 3vw, 2.4rem)",
-              color: "#E2E8F0",
+              color: "#FFFFFF",
               letterSpacing: "-0.02em",
             }}
           >
             Download Resume
           </h2>
-          <p style={{ color: "#64748B", fontSize: "0.9rem", marginTop: "12px" }}>
+          <p style={{ color: "#6B7280", fontSize: "0.9rem", marginTop: "12px" }}>
             Two tailored resumes — one for each career path.
           </p>
         </div>
@@ -53,7 +53,7 @@ export default function ResumeDownload() {
             className="card"
             style={{
               padding: "32px",
-              background: "linear-gradient(135deg, rgba(100,255,218,0.04), #0F0F1C)",
+              background: "linear-gradient(135deg, rgba(100,255,218,0.04), #141414)",
               borderColor: "rgba(100,255,218,0.15)",
             }}
           >
@@ -63,27 +63,27 @@ export default function ResumeDownload() {
                 height: "44px",
                 borderRadius: "10px",
                 background: "rgba(100,255,218,0.1)",
-                border: "1px solid rgba(100,255,218,0.2)",
+                border: "1px solid rgba(110, 142, 173,0.20)",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
                 marginBottom: "16px",
               }}
             >
-              <TrendingUp size={20} color="#64FFDA" />
+              <TrendingUp size={20} color="#6E8EAD" />
             </div>
             <h3
               style={{
                 fontFamily: "'Inter', sans-serif",
                 fontWeight: 600,
                 fontSize: "1rem",
-                color: "#E2E8F0",
+                color: "#FFFFFF",
                 marginBottom: "6px",
               }}
             >
               Quant Developer Resume
             </h3>
-            <p style={{ color: "#64748B", fontSize: "0.82rem", marginBottom: "20px", lineHeight: 1.5 }}>
+            <p style={{ color: "#6B7280", fontSize: "0.82rem", marginBottom: "20px", lineHeight: 1.5 }}>
               Focused on quantitative research, trading systems, statistical
               modeling, and algorithmic strategies.
             </p>
@@ -104,7 +104,7 @@ export default function ResumeDownload() {
             className="card"
             style={{
               padding: "32px",
-              background: "linear-gradient(135deg, rgba(123,158,255,0.04), #0F0F1C)",
+              background: "linear-gradient(135deg, rgba(123,158,255,0.04), #141414)",
               borderColor: "rgba(123,158,255,0.15)",
             }}
           >
@@ -114,27 +114,27 @@ export default function ResumeDownload() {
                 height: "44px",
                 borderRadius: "10px",
                 background: "rgba(123,158,255,0.1)",
-                border: "1px solid rgba(123,158,255,0.2)",
+                border: "1px solid rgba(255,255,255,0.10)",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
                 marginBottom: "16px",
               }}
             >
-              <Code2 size={20} color="#7B9EFF" />
+              <Code2 size={20} color="#6E8EAD" />
             </div>
             <h3
               style={{
                 fontFamily: "'Inter', sans-serif",
                 fontWeight: 600,
                 fontSize: "1rem",
-                color: "#E2E8F0",
+                color: "#FFFFFF",
                 marginBottom: "6px",
               }}
             >
               Software Engineer Resume
             </h3>
-            <p style={{ color: "#64748B", fontSize: "0.82rem", marginBottom: "20px", lineHeight: 1.5 }}>
+            <p style={{ color: "#6B7280", fontSize: "0.82rem", marginBottom: "20px", lineHeight: 1.5 }}>
               Focused on C++, backend systems, data structures, APIs, and
               engineering projects.
             </p>

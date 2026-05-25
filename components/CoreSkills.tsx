@@ -3,21 +3,21 @@
 import AnimateIn from "@/components/AnimateIn";
 
 const skills = [
-  { name: "C++", level: 88, color: "#7B9EFF" },
-  { name: "Python", level: 92, color: "#64FFDA" },
-  { name: "Data Structures & Algorithms", level: 85, color: "#7B9EFF" },
-  { name: "Quantitative Research", level: 82, color: "#64FFDA" },
-  { name: "Statistical Modeling", level: 80, color: "#64FFDA" },
-  { name: "Backend Development", level: 78, color: "#7B9EFF" },
-  { name: "Backtesting & Simulation", level: 85, color: "#64FFDA" },
-  { name: "REST APIs", level: 80, color: "#7B9EFF" },
-  { name: "SQL / Databases", level: 75, color: "#7B9EFF" },
-  { name: "Data Analysis & Visualization", level: 87, color: "#64FFDA" },
+  { name: "C++", level: 88, color: "#6E8EAD" },
+  { name: "Python", level: 92, color: "#6E8EAD" },
+  { name: "Data Structures & Algorithms", level: 85, color: "#6E8EAD" },
+  { name: "Quantitative Research", level: 82, color: "#6E8EAD" },
+  { name: "Statistical Modeling", level: 80, color: "#6E8EAD" },
+  { name: "Backend Development", level: 78, color: "#6E8EAD" },
+  { name: "Backtesting & Simulation", level: 85, color: "#6E8EAD" },
+  { name: "REST APIs", level: 80, color: "#6E8EAD" },
+  { name: "SQL / Databases", level: 75, color: "#6E8EAD" },
+  { name: "Data Analysis & Visualization", level: 87, color: "#6E8EAD" },
 ];
 
 const techBadges = [
   "Python", "C++17", "NumPy", "pandas", "statsmodels",
-  "FastAPI", "Docker", "PostgreSQL", "Redis", "Framer Motion",
+  "FastAPI", "Docker", "PostgreSQL","Framer Motion",
   "scikit-learn", "Matplotlib", "CMake", "Git", "Linux",
 ];
 
@@ -27,8 +27,8 @@ export default function CoreSkills() {
       id="core-skills"
       style={{
         padding: "100px 0",
-        borderTop: "1px solid #1E293B",
-        backgroundColor: "#080810",
+        borderTop: "1px solid #1C1C1C",
+        backgroundColor: "#0A0A0A",
       }}
     >
       <div className="section-container">
@@ -38,7 +38,7 @@ export default function CoreSkills() {
             style={{
               fontFamily: "'JetBrains Mono', monospace",
               fontSize: "0.75rem",
-              color: "#64FFDA",
+              color: "#6E8EAD",
               letterSpacing: "0.1em",
               marginBottom: "12px",
             }}
@@ -50,7 +50,7 @@ export default function CoreSkills() {
               fontFamily: "'Inter', sans-serif",
               fontWeight: 700,
               fontSize: "clamp(1.8rem, 3vw, 2.4rem)",
-              color: "#E2E8F0",
+              color: "#FFFFFF",
               letterSpacing: "-0.02em",
               marginBottom: "16px",
             }}
@@ -58,7 +58,7 @@ export default function CoreSkills() {
             Core Skills
           </h2>
           <div className="section-divider" />
-          <p style={{ color: "#64748B", fontSize: "0.9rem", marginTop: "14px", maxWidth: "500px" }}>
+          <p style={{ color: "#6B7280", fontSize: "0.9rem", marginTop: "14px", maxWidth: "500px" }}>
             Depth across quantitative methods and engineering systems, with a
             focus on performance and research rigor.
           </p>
@@ -86,7 +86,7 @@ export default function CoreSkills() {
                   style={{
                     fontSize: "0.875rem",
                     fontWeight: 500,
-                    color: "#CBD5E1",
+                    color: "#FFFFFF",
                   }}
                 >
                   {skill.name}
@@ -95,7 +95,7 @@ export default function CoreSkills() {
                   style={{
                     fontFamily: "'JetBrains Mono', monospace",
                     fontSize: "0.75rem",
-                    color: "#64748B",
+                    color: "#6B7280",
                   }}
                 >
                   {skill.level}%
@@ -117,7 +117,7 @@ export default function CoreSkills() {
         {/* Tech badge cloud */}
         <div
           style={{
-            borderTop: "1px solid #1E293B",
+            borderTop: "1px solid #1C1C1C",
             paddingTop: "36px",
           }}
         >
@@ -125,7 +125,7 @@ export default function CoreSkills() {
             style={{
               fontFamily: "'JetBrains Mono', monospace",
               fontSize: "0.72rem",
-              color: "#64748B",
+              color: "#6B7280",
               letterSpacing: "0.08em",
               marginBottom: "16px",
             }}

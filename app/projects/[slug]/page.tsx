@@ -21,7 +21,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
   if (!project) notFound();
 
   const isQuant = project.category === "quant";
-  const accent = isQuant ? "#64FFDA" : "#7B9EFF";
+  const accent = isQuant ? "#6E8EAD" : "#6E8EAD";
 
   return (
     <div style={{ paddingTop: "80px" }}>
@@ -35,7 +35,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
               display: "inline-flex",
               alignItems: "center",
               gap: "6px",
-              color: "#64748B",
+              color: "#6B7280",
               fontSize: "0.85rem",
               textDecoration: "none",
               marginBottom: "36px",
@@ -55,10 +55,10 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
                 {isQuant ? "Quant Research" : "Engineering"}
               </span>
             </div>
-            <h1 style={{ fontFamily: "'Inter', sans-serif", fontWeight: 700, fontSize: "clamp(1.8rem, 3vw, 2.5rem)", color: "#E2E8F0", letterSpacing: "-0.03em", marginBottom: "16px" }}>
+            <h1 style={{ fontFamily: "'Inter', sans-serif", fontWeight: 700, fontSize: "clamp(1.8rem, 3vw, 2.5rem)", color: "#FFFFFF", letterSpacing: "-0.03em", marginBottom: "16px" }}>
               {project.title}
             </h1>
-            <p style={{ color: "#94A3B8", fontSize: "1rem", lineHeight: 1.7, marginBottom: "24px" }}>
+            <p style={{ color: "#9CA3AF", fontSize: "1rem", lineHeight: 1.7, marginBottom: "24px" }}>
               {project.shortDescription}
             </p>
 
@@ -88,17 +88,17 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
           {isQuant && project.metrics && (
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(130px, 1fr))", gap: "12px", marginBottom: "40px" }}>
               {[
-                { label: "Sharpe Ratio", val: project.metrics.sharpeRatio?.toString(), color: "#64FFDA" },
+                { label: "Sharpe Ratio", val: project.metrics.sharpeRatio?.toString(), color: "#6E8EAD" },
                 { label: "Max Drawdown", val: project.metrics.maxDrawdown, color: "#F87171" },
                 { label: "Win Rate", val: project.metrics.winRate, color: "#4ADE80" },
-                { label: "Ann. Return", val: project.metrics.annualizedReturn, color: "#7B9EFF" },
-                { label: "Backtest Period", val: project.metrics.backtestPeriod, color: "#94A3B8" },
+                { label: "Ann. Return", val: project.metrics.annualizedReturn, color: "#6E8EAD" },
+                { label: "Backtest Period", val: project.metrics.backtestPeriod, color: "#9CA3AF" },
               ]
                 .filter((m) => m.val)
                 .map((m) => (
                   <div key={m.label} className="metric-card">
                     <div style={{ fontFamily: "'JetBrains Mono', monospace", fontWeight: 700, fontSize: "1.2rem", color: m.color }}>{m.val}</div>
-                    <div style={{ fontSize: "0.72rem", color: "#64748B", marginTop: "4px" }}>{m.label}</div>
+                    <div style={{ fontSize: "0.72rem", color: "#6B7280", marginTop: "4px" }}>{m.label}</div>
                   </div>
                 ))}
             </div>
@@ -120,7 +120,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
                   <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.7rem", color: accent, letterSpacing: "0.1em", marginBottom: "10px" }}>
                     {s.label}
                   </div>
-                  <p style={{ color: "#94A3B8", fontSize: "0.95rem", lineHeight: 1.8, borderLeft: `2px solid ${accent}20`, paddingLeft: "16px" }}>
+                  <p style={{ color: "#9CA3AF", fontSize: "0.95rem", lineHeight: 1.8, borderLeft: `2px solid ${accent}20`, paddingLeft: "16px" }}>
                     {s.content}
                   </p>
                 </div>

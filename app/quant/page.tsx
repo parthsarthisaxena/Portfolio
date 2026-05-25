@@ -38,7 +38,7 @@ export default function QuantPage() {
       <section
         style={{
           padding: "80px 0 60px",
-          borderBottom: "1px solid #1E293B",
+          borderBottom: "1px solid #1C1C1C",
           background: "linear-gradient(180deg, rgba(100,255,218,0.03) 0%, transparent 100%)",
           position: "relative",
           overflow: "hidden",
@@ -63,13 +63,13 @@ export default function QuantPage() {
               gap: "8px",
               padding: "5px 14px",
               borderRadius: "999px",
-              border: "1px solid rgba(100,255,218,0.2)",
+              border: "1px solid rgba(110, 142, 173,0.20)",
               background: "rgba(100,255,218,0.05)",
               marginBottom: "24px",
             }}
           >
-            <TrendingUp size={13} color="#64FFDA" />
-            <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.72rem", color: "#64FFDA", letterSpacing: "0.08em" }}>
+            <TrendingUp size={13} color="#6E8EAD" />
+            <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.72rem", color: "#6E8EAD", letterSpacing: "0.08em" }}>
               QUANTITATIVE RESEARCH
             </span>
           </div>
@@ -78,7 +78,7 @@ export default function QuantPage() {
               fontFamily: "'Inter', sans-serif",
               fontWeight: 700,
               fontSize: "clamp(2rem, 4vw, 3rem)",
-              color: "#E2E8F0",
+              color: "#FFFFFF",
               letterSpacing: "-0.03em",
               marginBottom: "16px",
             }}
@@ -86,7 +86,7 @@ export default function QuantPage() {
             Quant Research &{" "}
             <span className="gradient-text">Trading Systems</span>
           </h1>
-          <p style={{ color: "#94A3B8", fontSize: "1rem", lineHeight: 1.7, maxWidth: "600px", marginBottom: "32px" }}>
+          <p style={{ color: "#9CA3AF", fontSize: "1rem", lineHeight: 1.7, maxWidth: "600px", marginBottom: "32px" }}>
             Research-driven quantitative work spanning statistical arbitrage, adaptive signal generation, risk modeling, and systematic backtesting. Every project is hypothesis-driven and empirically validated.
           </p>
 
@@ -99,8 +99,8 @@ export default function QuantPage() {
               { val: "Python", label: "Primary Stack" },
             ].map((m) => (
               <div key={m.label}>
-                <div style={{ fontFamily: "'JetBrains Mono', monospace", fontWeight: 700, fontSize: "1.3rem", color: "#64FFDA" }}>{m.val}</div>
-                <div style={{ fontSize: "0.75rem", color: "#64748B" }}>{m.label}</div>
+                <div style={{ fontFamily: "'JetBrains Mono', monospace", fontWeight: 700, fontSize: "1.3rem", color: "#6E8EAD" }}>{m.val}</div>
+                <div style={{ fontSize: "0.75rem", color: "#6B7280" }}>{m.label}</div>
               </div>
             ))}
           </div>
@@ -108,18 +108,18 @@ export default function QuantPage() {
       </section>
 
       {/* Philosophy */}
-      <section style={{ padding: "72px 0", borderBottom: "1px solid #1E293B", backgroundColor: "#080810" }}>
+      <section style={{ padding: "72px 0", borderBottom: "1px solid #1C1C1C", backgroundColor: "#0A0A0A" }}>
         <div className="section-container">
-          <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.72rem", color: "#64FFDA", letterSpacing: "0.1em", marginBottom: "28px" }}>
+          <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.72rem", color: "#6E8EAD", letterSpacing: "0.1em", marginBottom: "28px" }}>
             RESEARCH PHILOSOPHY
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "16px" }}>
             {quantPhilosophy.map((item) => (
               <div key={item.title} className="card" style={{ padding: "20px" }}>
-                <h3 style={{ fontFamily: "'Inter', sans-serif", fontWeight: 600, fontSize: "0.9rem", color: "#64FFDA", marginBottom: "8px" }}>
+                <h3 style={{ fontFamily: "'Inter', sans-serif", fontWeight: 600, fontSize: "0.9rem", color: "#6E8EAD", marginBottom: "8px" }}>
                   {item.title}
                 </h3>
-                <p style={{ color: "#64748B", fontSize: "0.82rem", lineHeight: 1.6 }}>{item.desc}</p>
+                <p style={{ color: "#6B7280", fontSize: "0.82rem", lineHeight: 1.6 }}>{item.desc}</p>
               </div>
             ))}
           </div>
@@ -130,10 +130,10 @@ export default function QuantPage() {
       <section style={{ padding: "72px 0" }}>
         <div className="section-container">
           <div style={{ marginBottom: "40px" }}>
-            <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.72rem", color: "#64FFDA", letterSpacing: "0.1em", marginBottom: "12px" }}>
+            <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.72rem", color: "#6E8EAD", letterSpacing: "0.1em", marginBottom: "12px" }}>
               ALL RESEARCH
             </div>
-            <h2 style={{ fontFamily: "'Inter', sans-serif", fontWeight: 700, fontSize: "1.8rem", color: "#E2E8F0", letterSpacing: "-0.02em", marginBottom: "8px" }}>
+            <h2 style={{ fontFamily: "'Inter', sans-serif", fontWeight: 700, fontSize: "1.8rem", color: "#FFFFFF", letterSpacing: "-0.02em", marginBottom: "8px" }}>
               Quant Projects
             </h2>
             <div className="section-divider" />
@@ -148,9 +148,9 @@ export default function QuantPage() {
       </section>
 
       {/* CTA */}
-      <section style={{ padding: "60px 0 80px", backgroundColor: "#080810", borderTop: "1px solid #1E293B", textAlign: "center" }}>
+      <section style={{ padding: "60px 0 80px", backgroundColor: "#0A0A0A", borderTop: "1px solid #1C1C1C", textAlign: "center" }}>
         <div className="section-container">
-          <p style={{ color: "#64748B", fontSize: "0.9rem", marginBottom: "20px" }}>Interested in the research behind these systems?</p>
+          <p style={{ color: "#6B7280", fontSize: "0.9rem", marginBottom: "20px" }}>Interested in the research behind these systems?</p>
           <Link href="/blog" id="quant-blog-cta" className="btn-primary" style={{ display: "inline-flex" }}>
             <BookOpen size={15} /> Read Research Notes <ArrowRight size={14} />
           </Link>

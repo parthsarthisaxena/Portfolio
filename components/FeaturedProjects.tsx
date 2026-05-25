@@ -26,7 +26,7 @@ export default function FeaturedProjects() {
                 style={{
                   fontFamily: "'JetBrains Mono', monospace",
                   fontSize: "0.75rem",
-                  color: "#64FFDA",
+                  color: "#6E8EAD",
                   letterSpacing: "0.1em",
                   marginBottom: "12px",
                 }}
@@ -38,7 +38,7 @@ export default function FeaturedProjects() {
                   fontFamily: "'Inter', sans-serif",
                   fontWeight: 700,
                   fontSize: "clamp(1.8rem, 3vw, 2.4rem)",
-                  color: "#E2E8F0",
+                  color: "#FFFFFF",
                   letterSpacing: "-0.02em",
                   marginBottom: "12px",
                 }}

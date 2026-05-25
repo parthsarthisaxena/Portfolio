@@ -29,7 +29,7 @@ export default function EngineeringPage() {
       <section
         style={{
           padding: "80px 0 60px",
-          borderBottom: "1px solid #1E293B",
+          borderBottom: "1px solid #1C1C1C",
           background: "linear-gradient(180deg, rgba(123,158,255,0.03) 0%, transparent 100%)",
           position: "relative",
           overflow: "hidden",
@@ -54,13 +54,13 @@ export default function EngineeringPage() {
               gap: "8px",
               padding: "5px 14px",
               borderRadius: "999px",
-              border: "1px solid rgba(123,158,255,0.2)",
+              border: "1px solid rgba(255,255,255,0.10)",
               background: "rgba(123,158,255,0.05)",
               marginBottom: "24px",
             }}
           >
-            <Code2 size={13} color="#7B9EFF" />
-            <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.72rem", color: "#7B9EFF", letterSpacing: "0.08em" }}>
+            <Code2 size={13} color="#6E8EAD" />
+            <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.72rem", color: "#6E8EAD", letterSpacing: "0.08em" }}>
               SOFTWARE ENGINEERING
             </span>
           </div>
@@ -69,18 +69,16 @@ export default function EngineeringPage() {
               fontFamily: "'Inter', sans-serif",
               fontWeight: 700,
               fontSize: "clamp(2rem, 4vw, 3rem)",
-              color: "#E2E8F0",
+              color: "#FFFFFF",
               letterSpacing: "-0.03em",
               marginBottom: "16px",
             }}
           >
-            Backend Engineering &{" "}
-            <span style={{ background: "linear-gradient(135deg, #7B9EFF, #64FFDA)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
-              Systems
-            </span>
+            Software Developer  
+           
           </h1>
-          <p style={{ color: "#94A3B8", fontSize: "1rem", lineHeight: 1.7, maxWidth: "600px", marginBottom: "32px" }}>
-            C++, Python, APIs, data pipelines, and performance-focused systems engineering. Built around depth, clean architecture, and analytical rigor.
+          <p style={{ color: "#9CA3AF", fontSize: "1rem", lineHeight: 1.7, maxWidth: "600px", marginBottom: "32px" }}>
+            C++, Python, APIs, and performance-focused systems engineering. Built around depth, clean architecture, and analytical rigor.
           </p>
           <div style={{ display: "flex", gap: "40px", flexWrap: "wrap" }}>
             {[
@@ -90,8 +88,8 @@ export default function EngineeringPage() {
               { val: "C++/Python", label: "Primary Stack" },
             ].map((m) => (
               <div key={m.label}>
-                <div style={{ fontFamily: "'JetBrains Mono', monospace", fontWeight: 700, fontSize: "1.3rem", color: "#7B9EFF" }}>{m.val}</div>
-                <div style={{ fontSize: "0.75rem", color: "#64748B" }}>{m.label}</div>
+                <div style={{ fontFamily: "'JetBrains Mono', monospace", fontWeight: 700, fontSize: "1.3rem", color: "#6E8EAD" }}>{m.val}</div>
+                <div style={{ fontSize: "0.75rem", color: "#6B7280" }}>{m.label}</div>
               </div>
             ))}
           </div>
@@ -99,16 +97,16 @@ export default function EngineeringPage() {
       </section>
 
       {/* Principles */}
-      <section style={{ padding: "72px 0", borderBottom: "1px solid #1E293B", backgroundColor: "#080810" }}>
+      <section style={{ padding: "72px 0", borderBottom: "1px solid #1C1C1C", backgroundColor: "#0A0A0A" }}>
         <div className="section-container">
-          <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.72rem", color: "#7B9EFF", letterSpacing: "0.1em", marginBottom: "28px" }}>
+          <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.72rem", color: "#6E8EAD", letterSpacing: "0.1em", marginBottom: "28px" }}>
             ENGINEERING PHILOSOPHY
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "16px" }}>
             {engineeringPrinciples.map((item) => (
               <div key={item.title} className="card" style={{ padding: "20px" }}>
-                <h3 style={{ fontFamily: "'Inter', sans-serif", fontWeight: 600, fontSize: "0.9rem", color: "#7B9EFF", marginBottom: "8px" }}>{item.title}</h3>
-                <p style={{ color: "#64748B", fontSize: "0.82rem", lineHeight: 1.6 }}>{item.desc}</p>
+                <h3 style={{ fontFamily: "'Inter', sans-serif", fontWeight: 600, fontSize: "0.9rem", color: "#6E8EAD", marginBottom: "8px" }}>{item.title}</h3>
+                <p style={{ color: "#6B7280", fontSize: "0.82rem", lineHeight: 1.6 }}>{item.desc}</p>
               </div>
             ))}
           </div>
@@ -116,7 +114,7 @@ export default function EngineeringPage() {
       </section>
 
       {/* Core Stack */}
-      <section style={{ padding: "72px 0", borderBottom: "1px solid #1E293B" }}>
+      <section style={{ padding: "72px 0", borderBottom: "1px solid #1C1C1C" }}>
         <div className="section-container">
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "64px", alignItems: "start" }}>
             <TechStackBadges />
@@ -130,9 +128,9 @@ export default function EngineeringPage() {
       <section style={{ padding: "72px 0" }}>
         <div className="section-container">
           <div style={{ marginBottom: "40px" }}>
-            <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.72rem", color: "#7B9EFF", letterSpacing: "0.1em", marginBottom: "12px" }}>BUILT PROJECTS</div>
-            <h2 style={{ fontFamily: "'Inter', sans-serif", fontWeight: 700, fontSize: "1.8rem", color: "#E2E8F0", letterSpacing: "-0.02em", marginBottom: "8px" }}>Engineering Projects</h2>
-            <div style={{ width: "48px", height: "2px", background: "linear-gradient(90deg, #7B9EFF, transparent)", borderRadius: "1px" }} />
+            <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.72rem", color: "#6E8EAD", letterSpacing: "0.1em", marginBottom: "12px" }}>BUILT PROJECTS</div>
+            <h2 style={{ fontFamily: "'Inter', sans-serif", fontWeight: 700, fontSize: "1.8rem", color: "#FFFFFF", letterSpacing: "-0.02em", marginBottom: "8px" }}>Engineering Projects</h2>
+            <div style={{ width: "48px", height: "2px", background: "linear-gradient(90deg, #6E8EAD, transparent)", borderRadius: "1px" }} />
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "20px" }}>
             {engProjects.map((project) => (
@@ -142,15 +140,8 @@ export default function EngineeringPage() {
         </div>
       </section>
 
-      {/* GitHub CTA */}
-      <section style={{ padding: "60px 0 80px", backgroundColor: "#080810", borderTop: "1px solid #1E293B", textAlign: "center" }}>
-        <div className="section-container">
-          <p style={{ color: "#64748B", fontSize: "0.9rem", marginBottom: "20px" }}>All projects are open source.</p>
-          <a href="https://github.com/parthsarthisaxena" target="_blank" rel="noopener noreferrer" id="eng-github-cta" className="btn-secondary" style={{ display: "inline-flex" }}>
-            <GithubIcon size={15} color="currentColor" /> View on GitHub <ArrowRight size={14} />
-          </a>
-        </div>
-      </section>
+     
+    
     </div>
   );
 }

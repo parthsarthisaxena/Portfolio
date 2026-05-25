@@ -22,14 +22,14 @@ export default function ContactPage() {
         <div className="section-container" style={{ maxWidth: "860px" }}>
           {/* Header */}
           <div style={{ marginBottom: "56px" }}>
-            <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.75rem", color: "#64FFDA", letterSpacing: "0.1em", marginBottom: "12px" }}>
+            <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.75rem", color: "#6E8EAD", letterSpacing: "0.1em", marginBottom: "12px" }}>
               GET IN TOUCH
             </div>
-            <h1 style={{ fontFamily: "'Inter', sans-serif", fontWeight: 700, fontSize: "clamp(2rem, 4vw, 2.8rem)", color: "#E2E8F0", letterSpacing: "-0.03em", marginBottom: "16px" }}>
+            <h1 style={{ fontFamily: "'Inter', sans-serif", fontWeight: 700, fontSize: "clamp(2rem, 4vw, 2.8rem)", color: "#FFFFFF", letterSpacing: "-0.03em", marginBottom: "16px" }}>
               Contact
             </h1>
             <div className="section-divider" />
-            <p style={{ color: "#94A3B8", fontSize: "0.95rem", lineHeight: 1.7, maxWidth: "500px", marginTop: "16px" }}>
+            <p style={{ color: "#9CA3AF", fontSize: "0.95rem", lineHeight: 1.7, maxWidth: "500px", marginTop: "16px" }}>
               Open to quantitative developer and software engineering roles, research collaborations, and interesting conversations about trading systems and algorithms.
             </p>
           </div>
@@ -37,19 +37,19 @@ export default function ContactPage() {
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "48px", alignItems: "start" }}>
             {/* Contact info */}
             <div>
-              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.7rem", color: "#64FFDA", letterSpacing: "0.08em", marginBottom: "20px" }}>
+              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.7rem", color: "#6E8EAD", letterSpacing: "0.08em", marginBottom: "20px" }}>
                 FIND ME AT
               </div>
               <div style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
                 <a
                   href={`mailto:${CONTACT.email}`}
                   id="contact-email"
-                  style={{ display: "flex", alignItems: "center", gap: "12px", color: "#94A3B8", textDecoration: "none", padding: "14px 16px", borderRadius: "8px", border: "1px solid #1E293B", background: "#0F0F1C", transition: "all 0.2s" }}
+                  style={{ display: "flex", alignItems: "center", gap: "12px", color: "#9CA3AF", textDecoration: "none", padding: "14px 16px", borderRadius: "8px", border: "1px solid #1C1C1C", background: "#111111", transition: "all 0.2s" }}
                 >
-                  <Mail size={16} color="#64FFDA" />
+                  <Mail size={16} color="#6E8EAD" />
                   <div>
-                    <div style={{ fontSize: "0.72rem", color: "#64748B", marginBottom: "2px" }}>Email</div>
-                    <div style={{ fontSize: "0.875rem", color: "#E2E8F0" }}>{CONTACT.email}</div>
+                    <div style={{ fontSize: "0.72rem", color: "#6B7280", marginBottom: "2px" }}>Email</div>
+                    <div style={{ fontSize: "0.875rem", color: "#FFFFFF" }}>{CONTACT.email}</div>
                   </div>
                 </a>
 
@@ -58,12 +58,12 @@ export default function ContactPage() {
                   target="_blank"
                   rel="noopener noreferrer"
                   id="contact-github"
-                  style={{ display: "flex", alignItems: "center", gap: "12px", color: "#94A3B8", textDecoration: "none", padding: "14px 16px", borderRadius: "8px", border: "1px solid #1E293B", background: "#0F0F1C", transition: "all 0.2s" }}
+                  style={{ display: "flex", alignItems: "center", gap: "12px", color: "#9CA3AF", textDecoration: "none", padding: "14px 16px", borderRadius: "8px", border: "1px solid #1C1C1C", background: "#111111", transition: "all 0.2s" }}
                 >
-                  <GithubIcon size={16} color="#7B9EFF" />
+                  <GithubIcon size={16} color="#6E8EAD" />
                   <div>
-                    <div style={{ fontSize: "0.72rem", color: "#64748B", marginBottom: "2px" }}>GitHub</div>
-                    <div style={{ fontSize: "0.875rem", color: "#E2E8F0" }}>@{CONTACT.github}</div>
+                    <div style={{ fontSize: "0.72rem", color: "#6B7280", marginBottom: "2px" }}>GitHub</div>
+                    <div style={{ fontSize: "0.875rem", color: "#FFFFFF" }}>@{CONTACT.github}</div>
                   </div>
                 </a>
 
@@ -72,20 +72,20 @@ export default function ContactPage() {
                   target="_blank"
                   rel="noopener noreferrer"
                   id="contact-linkedin"
-                  style={{ display: "flex", alignItems: "center", gap: "12px", color: "#94A3B8", textDecoration: "none", padding: "14px 16px", borderRadius: "8px", border: "1px solid #1E293B", background: "#0F0F1C", transition: "all 0.2s" }}
+                  style={{ display: "flex", alignItems: "center", gap: "12px", color: "#9CA3AF", textDecoration: "none", padding: "14px 16px", borderRadius: "8px", border: "1px solid #1C1C1C", background: "#111111", transition: "all 0.2s" }}
                 >
-                  <LinkedinIcon size={16} color="#7B9EFF" />
+                  <LinkedinIcon size={16} color="#6E8EAD" />
                   <div>
-                    <div style={{ fontSize: "0.72rem", color: "#64748B", marginBottom: "2px" }}>LinkedIn</div>
-                    <div style={{ fontSize: "0.875rem", color: "#E2E8F0" }}>linkedin.com/{CONTACT.linkedin}</div>
+                    <div style={{ fontSize: "0.72rem", color: "#6B7280", marginBottom: "2px" }}>LinkedIn</div>
+                    <div style={{ fontSize: "0.875rem", color: "#FFFFFF" }}>linkedin.com/{CONTACT.linkedin}</div>
                   </div>
                 </a>
 
-                <div style={{ display: "flex", alignItems: "center", gap: "12px", padding: "14px 16px", borderRadius: "8px", border: "1px solid #1E293B", background: "#0F0F1C" }}>
-                  <MapPin size={16} color="#64748B" />
+                <div style={{ display: "flex", alignItems: "center", gap: "12px", padding: "14px 16px", borderRadius: "8px", border: "1px solid #1C1C1C", background: "#111111" }}>
+                  <MapPin size={16} color="#6B7280" />
                   <div>
-                    <div style={{ fontSize: "0.72rem", color: "#64748B", marginBottom: "2px" }}>Location</div>
-                    <div style={{ fontSize: "0.875rem", color: "#E2E8F0" }}>{CONTACT.location}</div>
+                    <div style={{ fontSize: "0.72rem", color: "#6B7280", marginBottom: "2px" }}>Location</div>
+                    <div style={{ fontSize: "0.875rem", color: "#FFFFFF" }}>{CONTACT.location}</div>
                   </div>
                 </div>
               </div>
@@ -93,7 +93,7 @@ export default function ContactPage() {
 
             {/* Message form */}
             <div>
-              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.7rem", color: "#64FFDA", letterSpacing: "0.08em", marginBottom: "20px" }}>
+              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.7rem", color: "#6E8EAD", letterSpacing: "0.08em", marginBottom: "20px" }}>
                 SEND A MESSAGE
               </div>
               <form
@@ -103,7 +103,7 @@ export default function ContactPage() {
                 style={{ display: "flex", flexDirection: "column", gap: "14px" }}
               >
                 <div>
-                  <label style={{ display: "block", fontSize: "0.78rem", color: "#64748B", marginBottom: "6px", fontFamily: "'JetBrains Mono', monospace" }}>
+                  <label style={{ display: "block", fontSize: "0.78rem", color: "#6B7280", marginBottom: "6px", fontFamily: "'JetBrains Mono', monospace" }}>
                     NAME
                   </label>
                   <input
@@ -114,10 +114,10 @@ export default function ContactPage() {
                     style={{
                       width: "100%",
                       padding: "10px 14px",
-                      background: "#0F0F1C",
-                      border: "1px solid #1E293B",
+                      background: "#111111",
+                      border: "1px solid #1C1C1C",
                       borderRadius: "8px",
-                      color: "#E2E8F0",
+                      color: "#FFFFFF",
                       fontSize: "0.875rem",
                       outline: "none",
                       fontFamily: "'Inter', sans-serif",
@@ -126,7 +126,7 @@ export default function ContactPage() {
                   />
                 </div>
                 <div>
-                  <label style={{ display: "block", fontSize: "0.78rem", color: "#64748B", marginBottom: "6px", fontFamily: "'JetBrains Mono', monospace" }}>
+                  <label style={{ display: "block", fontSize: "0.78rem", color: "#6B7280", marginBottom: "6px", fontFamily: "'JetBrains Mono', monospace" }}>
                     MESSAGE
                   </label>
                   <textarea
@@ -137,10 +137,10 @@ export default function ContactPage() {
                     style={{
                       width: "100%",
                       padding: "10px 14px",
-                      background: "#0F0F1C",
-                      border: "1px solid #1E293B",
+                      background: "#111111",
+                      border: "1px solid #1C1C1C",
                       borderRadius: "8px",
-                      color: "#E2E8F0",
+                      color: "#FFFFFF",
                       fontSize: "0.875rem",
                       outline: "none",
                       resize: "vertical",

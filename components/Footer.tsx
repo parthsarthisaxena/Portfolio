@@ -19,8 +19,8 @@ export default function Footer() {
   return (
     <footer
       style={{
-        borderTop: "1px solid #1E293B",
-        backgroundColor: "#05050A",
+        borderTop: "1px solid #1C1C1C",
+        backgroundColor: "#0A0A0A",
         padding: "40px 0 28px",
       }}
     >
@@ -41,7 +41,7 @@ export default function Footer() {
                 fontFamily: "'Inter', sans-serif",
                 fontWeight: 700,
                 fontSize: "1.1rem",
-                color: "#E2E8F0",
+                color: "#FFFFFF",
                 marginBottom: "8px",
               }}
             >
@@ -49,7 +49,7 @@ export default function Footer() {
             </div>
             <div
               style={{
-                color: "#64748B",
+                color: "#6B7280",
                 fontSize: "0.85rem",
                 maxWidth: "320px",
                 lineHeight: 1.6,
@@ -83,7 +83,7 @@ export default function Footer() {
                   key={link.href}
                   href={link.href}
                   style={{
-                    color: "#64748B",
+                    color: "#6B7280",
                     fontSize: "0.82rem",
                     textDecoration: "none",
                     transition: "color 0.2s",
@@ -109,7 +109,7 @@ export default function Footer() {
                 id="footer-github"
                 aria-label="GitHub"
                 style={{
-                  color: "#64748B",
+                  color: "#6B7280",
                   transition: "color 0.2s",
                   display: "flex",
                 }}
@@ -123,7 +123,7 @@ export default function Footer() {
                 id="footer-linkedin"
                 aria-label="LinkedIn"
                 style={{
-                  color: "#64748B",
+                  color: "#6B7280",
                   transition: "color 0.2s",
                   display: "flex",
                 }}
@@ -135,7 +135,7 @@ export default function Footer() {
                 id="footer-email"
                 aria-label="Email"
                 style={{
-                  color: "#64748B",
+                  color: "#6B7280",
                   transition: "color 0.2s",
                   display: "flex",
                 }}
@@ -149,7 +149,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div
           style={{
-            borderTop: "1px solid #1E293B",
+            borderTop: "1px solid #1C1C1C",
             paddingTop: "20px",
             display: "flex",
             alignItems: "center",
@@ -160,7 +160,7 @@ export default function Footer() {
         >
           <span
             style={{
-              color: "#475569",
+              color: "#6B7280",
               fontSize: "0.78rem",
               fontFamily: "'JetBrains Mono', monospace",
             }}
@@ -172,7 +172,7 @@ export default function Footer() {
               display: "flex",
               alignItems: "center",
               gap: "6px",
-              color: "#475569",
+              color: "#6B7280",
               fontSize: "0.78rem",
               fontFamily: "'JetBrains Mono', monospace",
             }}
@@ -182,7 +182,7 @@ export default function Footer() {
                 width: "6px",
                 height: "6px",
                 borderRadius: "50%",
-                backgroundColor: "#64FFDA",
+                backgroundColor: "#6E8EAD",
                 animation: "pulse 2s ease-in-out infinite",
               }}
             />
@@ -196,7 +196,7 @@ export default function Footer() {
           0%, 100% { opacity: 1; }
           50% { opacity: 0.4; }
         }
-        a:hover { color: #E2E8F0 !important; }
+        a:hover { color: #FFFFFF !important; }
       `}</style>
     </footer>
   );

@@ -60,8 +60,8 @@ export default function Timeline() {
       id="timeline"
       style={{
         padding: "100px 0",
-        backgroundColor: "#080810",
-        borderTop: "1px solid #1E293B",
+        backgroundColor: "#0A0A0A",
+        borderTop: "1px solid #1C1C1C",
       }}
     >
       <div className="section-container">
@@ -70,7 +70,7 @@ export default function Timeline() {
             style={{
               fontFamily: "'JetBrains Mono', monospace",
               fontSize: "0.75rem",
-              color: "#64FFDA",
+              color: "#6E8EAD",
               letterSpacing: "0.1em",
               marginBottom: "12px",
             }}
@@ -82,7 +82,7 @@ export default function Timeline() {
               fontFamily: "'Inter', sans-serif",
               fontWeight: 700,
               fontSize: "clamp(1.8rem, 3vw, 2.4rem)",
-              color: "#E2E8F0",
+              color: "#FFFFFF",
               letterSpacing: "-0.02em",
               marginBottom: "12px",
             }}
@@ -108,8 +108,8 @@ export default function Timeline() {
                     width: "12px",
                     height: "12px",
                     borderRadius: "50%",
-                    border: `2px solid ${event.type === "quant" ? "#64FFDA" : "#7B9EFF"}`,
-                    background: "#05050A",
+                    border: `2px solid ${event.type === "quant" ? "#6E8EAD" : "#6E8EAD"}`,
+                    background: "#0A0A0A",
                   }}
                 />
 
@@ -118,7 +118,7 @@ export default function Timeline() {
                   style={{
                     fontFamily: "'JetBrains Mono', monospace",
                     fontSize: "0.7rem",
-                    color: event.type === "quant" ? "#64FFDA" : "#7B9EFF",
+                    color: event.type === "quant" ? "#6E8EAD" : "#6E8EAD",
                     letterSpacing: "0.06em",
                     marginBottom: "4px",
                     display: "block",
@@ -132,13 +132,13 @@ export default function Timeline() {
                     fontFamily: "'Inter', sans-serif",
                     fontWeight: 600,
                     fontSize: "0.95rem",
-                    color: "#E2E8F0",
+                    color: "#FFFFFF",
                     marginBottom: "6px",
                   }}
                 >
                   {event.title}
                 </h3>
-                <p style={{ color: "#64748B", fontSize: "0.85rem", lineHeight: 1.6, maxWidth: "560px" }}>
+                <p style={{ color: "#6B7280", fontSize: "0.85rem", lineHeight: 1.6, maxWidth: "560px" }}>
                   {event.description}
                 </p>
               </AnimateIn>

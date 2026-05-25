@@ -376,17 +376,17 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       if (inCodeBlock) { codeLines.push(line); continue; }
 
       if (line.startsWith("## ")) {
-        elements.push(<h2 key={keyIdx++} style={{ fontFamily: "'Inter', sans-serif", fontWeight: 600, fontSize: "1.3rem", color: "#E2E8F0", marginTop: "2rem", marginBottom: "0.75rem", letterSpacing: "-0.01em" }}>{line.slice(3)}</h2>);
+        elements.push(<h2 key={keyIdx++} style={{ fontFamily: "'Inter', sans-serif", fontWeight: 600, fontSize: "1.3rem", color: "#FFFFFF", marginTop: "2rem", marginBottom: "0.75rem", letterSpacing: "-0.01em" }}>{line.slice(3)}</h2>);
       } else if (line.startsWith("# ")) {
-        elements.push(<h1 key={keyIdx++} style={{ fontFamily: "'Inter', sans-serif", fontWeight: 700, fontSize: "1.8rem", color: "#E2E8F0", marginBottom: "1rem" }}>{line.slice(2)}</h1>);
+        elements.push(<h1 key={keyIdx++} style={{ fontFamily: "'Inter', sans-serif", fontWeight: 700, fontSize: "1.8rem", color: "#FFFFFF", marginBottom: "1rem" }}>{line.slice(2)}</h1>);
       } else if (line.startsWith("**") && line.endsWith("**")) {
-        elements.push(<p key={keyIdx++} style={{ color: "#CBD5E1", fontWeight: 600, fontSize: "0.95rem", marginBottom: "0.5rem" }}>{line.slice(2, -2)}</p>);
+        elements.push(<p key={keyIdx++} style={{ color: "#FFFFFF", fontWeight: 600, fontSize: "0.95rem", marginBottom: "0.5rem" }}>{line.slice(2, -2)}</p>);
       } else if (line.startsWith("- ")) {
-        elements.push(<li key={keyIdx++} style={{ color: "#94A3B8", fontSize: "0.95rem", lineHeight: 1.7, marginBottom: "4px", marginLeft: "20px" }}>{line.slice(2)}</li>);
+        elements.push(<li key={keyIdx++} style={{ color: "#9CA3AF", fontSize: "0.95rem", lineHeight: 1.7, marginBottom: "4px", marginLeft: "20px" }}>{line.slice(2)}</li>);
       } else if (line.trim() === "") {
         elements.push(<div key={keyIdx++} style={{ height: "8px" }} />);
       } else {
-        elements.push(<p key={keyIdx++} style={{ color: "#94A3B8", fontSize: "0.95rem", lineHeight: 1.8, marginBottom: "1rem" }}>{line}</p>);
+        elements.push(<p key={keyIdx++} style={{ color: "#9CA3AF", fontSize: "0.95rem", lineHeight: 1.8, marginBottom: "1rem" }}>{line}</p>);
       }
     }
     return elements;
@@ -397,7 +397,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       <article style={{ padding: "60px 0 100px" }}>
         <div className="section-container" style={{ maxWidth: "780px" }}>
           {/* Back */}
-          <Link href="/blog" id="blog-post-back" style={{ display: "inline-flex", alignItems: "center", gap: "6px", color: "#64748B", fontSize: "0.85rem", textDecoration: "none", marginBottom: "40px" }}>
+          <Link href="/blog" id="blog-post-back" style={{ display: "inline-flex", alignItems: "center", gap: "6px", color: "#6B7280", fontSize: "0.85rem", textDecoration: "none", marginBottom: "40px" }}>
             <ArrowLeft size={15} /> Back to Blog
           </Link>
 
@@ -406,13 +406,13 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             <div style={{ display: "flex", gap: "8px", flexWrap: "wrap", marginBottom: "16px" }}>
               <span className={isQuant ? "tag" : "tag tag-blue"}>{isQuant ? "Quant Research" : "Engineering"}</span>
             </div>
-            <h1 style={{ fontFamily: "'Inter', sans-serif", fontWeight: 700, fontSize: "clamp(1.8rem, 3vw, 2.4rem)", color: "#E2E8F0", letterSpacing: "-0.03em", marginBottom: "16px", lineHeight: 1.2 }}>
+            <h1 style={{ fontFamily: "'Inter', sans-serif", fontWeight: 700, fontSize: "clamp(1.8rem, 3vw, 2.4rem)", color: "#FFFFFF", letterSpacing: "-0.03em", marginBottom: "16px", lineHeight: 1.2 }}>
               {post.title}
             </h1>
-            <p style={{ color: "#94A3B8", fontSize: "1rem", lineHeight: 1.7, marginBottom: "20px" }}>{post.excerpt}</p>
-            <div style={{ display: "flex", gap: "20px", alignItems: "center", flexWrap: "wrap", paddingBottom: "24px", borderBottom: "1px solid #1E293B" }}>
-              <span style={{ color: "#475569", fontSize: "0.8rem", fontFamily: "'JetBrains Mono', monospace" }}>{formatDate(post.date)}</span>
-              <span style={{ display: "flex", alignItems: "center", gap: "4px", color: "#475569", fontSize: "0.8rem", fontFamily: "'JetBrains Mono', monospace" }}>
+            <p style={{ color: "#9CA3AF", fontSize: "1rem", lineHeight: 1.7, marginBottom: "20px" }}>{post.excerpt}</p>
+            <div style={{ display: "flex", gap: "20px", alignItems: "center", flexWrap: "wrap", paddingBottom: "24px", borderBottom: "1px solid #1C1C1C" }}>
+              <span style={{ color: "#6B7280", fontSize: "0.8rem", fontFamily: "'JetBrains Mono', monospace" }}>{formatDate(post.date)}</span>
+              <span style={{ display: "flex", alignItems: "center", gap: "4px", color: "#6B7280", fontSize: "0.8rem", fontFamily: "'JetBrains Mono', monospace" }}>
                 <Clock size={12} /> {post.readingTime}
               </span>
               <div style={{ display: "flex", gap: "6px" }}>

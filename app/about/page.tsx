@@ -34,25 +34,25 @@ const journey = [
     icon: Zap,
     title: "Started from Zero",
     desc: "ECE student with no formal CS background. Picked up C++ and Python entirely on my own — tutorials, books, and a lot of trial and error.",
-    color: "#64FFDA",
+    color: "#6E8EAD",
   },
   {
     icon: Code2,
     title: "Went Deep on Algorithms",
     desc: "Solved 300+ DSA problems in C++. Not for the badge — to build the kind of algorithmic thinking that serious systems demand.",
-    color: "#7B9EFF",
+    color: "#6E8EAD",
   },
   {
     icon: BookOpen,
     title: "Discovered Quant Finance",
     desc: "Self-studied the mathematics behind trading: stochastic processes, time-series analysis, statistical arbitrage. Then built real backtested systems to prove the theory works.",
-    color: "#64FFDA",
+    color: "#6E8EAD",
   },
   {
     icon: Target,
     title: "Now Targeting the Industry",
     desc: "Open to quant developer roles, trading system engineering, and SDE positions at fintech firms. Looking to turn years of self-study into a full-time career in markets.",
-    color: "#7B9EFF",
+    color: "#6E8EAD",
   },
 ];
 
@@ -66,7 +66,7 @@ const skills = {
     { name: "Market Regime Detection", level: 78 },
   ],
   engineering: [
-    { name: "C++17/20", level: 88 },
+    { name: "C++", level: 88 },
     { name: "Python", level: 93 },
     { name: "Data Structures & Algorithms", level: 90 },
     { name: "FastAPI / REST", level: 80 },
@@ -83,7 +83,7 @@ export default function AboutPage() {
       <section
         style={{
           padding: "80px 0 72px",
-          borderBottom: "1px solid #1E293B",
+          borderBottom: "1px solid #1C1C1C",
           position: "relative",
           overflow: "hidden",
         }}
@@ -106,7 +106,7 @@ export default function AboutPage() {
             style={{
               fontFamily: "'JetBrains Mono', monospace",
               fontSize: "0.75rem",
-              color: "#64FFDA",
+              color: "#6E8EAD",
               letterSpacing: "0.1em",
               marginBottom: "20px",
             }}
@@ -128,7 +128,7 @@ export default function AboutPage() {
                   fontFamily: "'Inter', sans-serif",
                   fontWeight: 700,
                   fontSize: "clamp(2rem, 4vw, 3rem)",
-                  color: "#E2E8F0",
+                  color: "#FFFFFF",
                   letterSpacing: "-0.03em",
                   lineHeight: 1.15,
                   marginBottom: "28px",
@@ -138,7 +138,7 @@ export default function AboutPage() {
                 <span
                   style={{
                     background:
-                      "linear-gradient(135deg, #64FFDA 0%, #7B9EFF 100%)",
+                      "linear-gradient(135deg, #6E8EAD 0%, #6E8EAD 100%)",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
                     backgroundClip: "text",
@@ -151,7 +151,7 @@ export default function AboutPage() {
 
               <p
                 style={{
-                  color: "#94A3B8",
+                  color: "#9CA3AF",
                   fontSize: "1.05rem",
                   lineHeight: 1.85,
                   maxWidth: "620px",
@@ -166,7 +166,7 @@ export default function AboutPage() {
               </p>
               <p
                 style={{
-                  color: "#64748B",
+                  color: "#6B7280",
                   fontSize: "0.95rem",
                   lineHeight: 1.85,
                   maxWidth: "620px",
@@ -176,7 +176,7 @@ export default function AboutPage() {
                 Most people in this space come from IITs and CS departments. I
                 came from Electronics &amp; Communication, fought through the
                 imposter syndrome, and built{" "}
-                <span style={{ color: "#94A3B8" }}>
+                <span style={{ color: "#9CA3AF" }}>
                   9+ quant projects, 300+ DSA solutions, and a backtesting
                   engine from scratch
                 </span>{" "}
@@ -202,7 +202,7 @@ export default function AboutPage() {
                 style={{
                   padding: "24px 22px",
                   background:
-                    "linear-gradient(135deg, rgba(100,255,218,0.04), #0F0F1C)",
+                    "linear-gradient(135deg, rgba(100,255,218,0.04), #141414)",
                 }}
               >
                 <div
@@ -220,7 +220,7 @@ export default function AboutPage() {
                     fontFamily: "'JetBrains Mono', monospace",
                     fontWeight: 700,
                     fontSize: "1.5rem",
-                    color: "#64FFDA",
+                    color: "#6E8EAD",
                   }}
                 >
                   PS
@@ -230,7 +230,7 @@ export default function AboutPage() {
                     fontFamily: "'Inter', sans-serif",
                     fontWeight: 600,
                     fontSize: "0.9rem",
-                    color: "#E2E8F0",
+                    color: "#FFFFFF",
                     textAlign: "center",
                     marginBottom: "4px",
                   }}
@@ -240,7 +240,7 @@ export default function AboutPage() {
                 <div
                   style={{
                     fontSize: "0.72rem",
-                    color: "#64748B",
+                    color: "#6B7280",
                     fontFamily: "'JetBrains Mono', monospace",
                     textAlign: "center",
                     marginBottom: "20px",
@@ -273,10 +273,10 @@ export default function AboutPage() {
                         gap: "8px",
                       }}
                     >
-                      <span style={{ color: "#64748B" }}>{row.label}</span>
+                      <span style={{ color: "#6B7280" }}>{row.label}</span>
                       <span
                         style={{
-                          color: row.label === "Status" ? "#64FFDA" : "#CBD5E1",
+                          color: row.label === "Status" ? "#6E8EAD" : "#FFFFFF",
                           fontFamily: "'JetBrains Mono', monospace",
                           fontSize: "0.7rem",
                           textAlign: "right",
@@ -297,8 +297,8 @@ export default function AboutPage() {
       <section
         style={{
           padding: "80px 0",
-          borderBottom: "1px solid #1E293B",
-          backgroundColor: "#080810",
+          borderBottom: "1px solid #1C1C1C",
+          backgroundColor: "#0A0A0A",
         }}
       >
         <div className="section-container">
@@ -306,7 +306,7 @@ export default function AboutPage() {
             style={{
               fontFamily: "'JetBrains Mono', monospace",
               fontSize: "0.72rem",
-              color: "#64FFDA",
+              color: "#6E8EAD",
               letterSpacing: "0.1em",
               marginBottom: "40px",
             }}
@@ -352,7 +352,7 @@ export default function AboutPage() {
                       style={{
                         fontFamily: "'JetBrains Mono', monospace",
                         fontSize: "0.65rem",
-                        color: "#475569",
+                        color: "#6B7280",
                         letterSpacing: "0.06em",
                       }}
                     >
@@ -364,7 +364,7 @@ export default function AboutPage() {
                       fontFamily: "'Inter', sans-serif",
                       fontWeight: 600,
                       fontSize: "0.9rem",
-                      color: "#E2E8F0",
+                      color: "#FFFFFF",
                       marginBottom: "8px",
                     }}
                   >
@@ -372,7 +372,7 @@ export default function AboutPage() {
                   </h3>
                   <p
                     style={{
-                      color: "#64748B",
+                      color: "#6B7280",
                       fontSize: "0.83rem",
                       lineHeight: 1.7,
                     }}
@@ -390,7 +390,7 @@ export default function AboutPage() {
       <section
         style={{
           padding: "80px 0",
-          borderBottom: "1px solid #1E293B",
+          borderBottom: "1px solid #1C1C1C",
         }}
       >
         <div className="section-container">
@@ -398,7 +398,7 @@ export default function AboutPage() {
             style={{
               fontFamily: "'JetBrains Mono', monospace",
               fontSize: "0.72rem",
-              color: "#64FFDA",
+              color: "#6E8EAD",
               letterSpacing: "0.1em",
               marginBottom: "36px",
             }}
@@ -414,14 +414,14 @@ export default function AboutPage() {
                   height: "42px",
                   borderRadius: "10px",
                   background: "rgba(100,255,218,0.1)",
-                  border: "1px solid rgba(100,255,218,0.2)",
+                  border: "1px solid rgba(110, 142, 173,0.20)",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
                   flexShrink: 0,
                 }}
               >
-                <GraduationCap size={19} color="#64FFDA" />
+                <GraduationCap size={19} color="#6E8EAD" />
               </div>
               <div style={{ flex: 1 }}>
                 <div
@@ -439,7 +439,7 @@ export default function AboutPage() {
                       fontFamily: "'Inter', sans-serif",
                       fontWeight: 600,
                       fontSize: "1rem",
-                      color: "#E2E8F0",
+                      color: "#FFFFFF",
                     }}
                   >
                     {education.degree}
@@ -448,7 +448,7 @@ export default function AboutPage() {
                     style={{
                       fontFamily: "'JetBrains Mono', monospace",
                       fontSize: "0.72rem",
-                      color: "#64748B",
+                      color: "#6B7280",
                     }}
                   >
                     {education.period}
@@ -458,7 +458,7 @@ export default function AboutPage() {
                 <div
                   style={{
                     fontSize: "0.85rem",
-                    color: "#64FFDA",
+                    color: "#6E8EAD",
                     marginBottom: "16px",
                   }}
                 >
@@ -469,7 +469,7 @@ export default function AboutPage() {
                   style={{
                     fontFamily: "'JetBrains Mono', monospace",
                     fontSize: "0.65rem",
-                    color: "#475569",
+                    color: "#6B7280",
                     letterSpacing: "0.08em",
                     marginBottom: "10px",
                   }}
@@ -493,8 +493,8 @@ export default function AboutPage() {
       <section
         style={{
           padding: "80px 0",
-          borderBottom: "1px solid #1E293B",
-          backgroundColor: "#080810",
+          borderBottom: "1px solid #1C1C1C",
+          backgroundColor: "#0A0A0A",
         }}
       >
         <div className="section-container">
@@ -502,7 +502,7 @@ export default function AboutPage() {
             style={{
               fontFamily: "'JetBrains Mono', monospace",
               fontSize: "0.72rem",
-              color: "#64FFDA",
+              color: "#6E8EAD",
               letterSpacing: "0.1em",
               marginBottom: "40px",
             }}
@@ -527,12 +527,12 @@ export default function AboutPage() {
                   marginBottom: "24px",
                 }}
               >
-                <TrendingUp size={15} color="#64FFDA" />
+                <TrendingUp size={15} color="#6E8EAD" />
                 <span
                   style={{
                     fontFamily: "'JetBrains Mono', monospace",
                     fontSize: "0.7rem",
-                    color: "#64FFDA",
+                    color: "#6E8EAD",
                     letterSpacing: "0.08em",
                   }}
                 >
@@ -549,14 +549,14 @@ export default function AboutPage() {
                         marginBottom: "6px",
                       }}
                     >
-                      <span style={{ fontSize: "0.875rem", color: "#CBD5E1", fontWeight: 500 }}>
+                      <span style={{ fontSize: "0.875rem", color: "#FFFFFF", fontWeight: 500 }}>
                         {s.name}
                       </span>
                       <span
                         style={{
                           fontFamily: "'JetBrains Mono', monospace",
                           fontSize: "0.72rem",
-                          color: "#64748B",
+                          color: "#6B7280",
                         }}
                       >
                         {s.level}%
@@ -580,12 +580,12 @@ export default function AboutPage() {
                   marginBottom: "24px",
                 }}
               >
-                <Code2 size={15} color="#7B9EFF" />
+                <Code2 size={15} color="#6E8EAD" />
                 <span
                   style={{
                     fontFamily: "'JetBrains Mono', monospace",
                     fontSize: "0.7rem",
-                    color: "#7B9EFF",
+                    color: "#6E8EAD",
                     letterSpacing: "0.08em",
                   }}
                 >
@@ -602,14 +602,14 @@ export default function AboutPage() {
                         marginBottom: "6px",
                       }}
                     >
-                      <span style={{ fontSize: "0.875rem", color: "#CBD5E1", fontWeight: 500 }}>
+                      <span style={{ fontSize: "0.875rem", color: "#FFFFFF", fontWeight: 500 }}>
                         {s.name}
                       </span>
                       <span
                         style={{
                           fontFamily: "'JetBrains Mono', monospace",
                           fontSize: "0.72rem",
-                          color: "#64748B",
+                          color: "#6B7280",
                         }}
                       >
                         {s.level}%
@@ -620,7 +620,7 @@ export default function AboutPage() {
                         className="skill-bar-fill"
                         style={{
                           width: `${s.level}%`,
-                          background: "linear-gradient(90deg, #7B9EFF, #64FFDA88)",
+                          background: "linear-gradient(90deg, #6E8EAD, #6E8EAD88)",
                         }}
                       />
                     </div>
@@ -639,7 +639,7 @@ export default function AboutPage() {
             style={{
               fontFamily: "'JetBrains Mono', monospace",
               fontSize: "0.72rem",
-              color: "#64FFDA",
+              color: "#6E8EAD",
               letterSpacing: "0.1em",
               marginBottom: "16px",
             }}
@@ -651,7 +651,7 @@ export default function AboutPage() {
               fontFamily: "'Inter', sans-serif",
               fontWeight: 700,
               fontSize: "clamp(1.6rem, 3vw, 2.2rem)",
-              color: "#E2E8F0",
+              color: "#FFFFFF",
               letterSpacing: "-0.02em",
               marginBottom: "14px",
             }}
@@ -660,7 +660,7 @@ export default function AboutPage() {
           </h2>
           <p
             style={{
-              color: "#64748B",
+              color: "#6B7280",
               fontSize: "0.9rem",
               lineHeight: 1.7,
               maxWidth: "480px",

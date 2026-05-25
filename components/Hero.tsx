@@ -97,8 +97,8 @@ export default function Hero() {
               gap: "8px",
               padding: "5px 14px",
               borderRadius: "999px",
-              border: "1px solid rgba(100,255,218,0.2)",
-              background: "rgba(100,255,218,0.05)",
+              border: "1px solid rgba(255,255,255,0.1)",
+              background: "rgba(255,255,255,0.04)",
               marginBottom: "28px",
             }}
           >
@@ -107,7 +107,7 @@ export default function Hero() {
                 width: "6px",
                 height: "6px",
                 borderRadius: "50%",
-                background: "#64FFDA",
+                background: "#6E8EAD",
                 animation: "pulse 2s ease-in-out infinite",
               }}
             />
@@ -115,7 +115,7 @@ export default function Hero() {
               style={{
                 fontFamily: "'JetBrains Mono', monospace",
                 fontSize: "0.75rem",
-                color: "#64FFDA",
+                color: "#FFFFFF",
                 letterSpacing: "0.08em",
               }}
             >
@@ -131,7 +131,7 @@ export default function Hero() {
               fontSize: "clamp(2.4rem, 5vw, 4rem)",
               lineHeight: 1.1,
               letterSpacing: "-0.03em",
-              color: "#E2E8F0",
+              color: "#FFFFFF",
               marginBottom: "8px",
             }}
           >
@@ -145,7 +145,7 @@ export default function Hero() {
             style={{
               fontFamily: "'JetBrains Mono', monospace",
               fontSize: "clamp(0.9rem, 2vw, 1.1rem)",
-              color: "#64FFDA",
+              color: "#FFFFFF",
               minHeight: "32px",
               marginBottom: "24px",
             }}
@@ -158,15 +158,15 @@ export default function Hero() {
           <p
             style={{
               fontSize: "clamp(0.95rem, 2vw, 1.1rem)",
-              color: "#94A3B8",
+              color: "#9CA3AF",
               lineHeight: 1.7,
               maxWidth: "600px",
               marginBottom: "40px",
             }}
           >
             Building data-driven systems across{" "}
-            <span style={{ color: "#64FFDA" }}>quantitative finance</span>,{" "}
-            <span style={{ color: "#7B9EFF" }}>backend engineering</span>, and
+            <span style={{ color: "#FFFFFF" }}>quantitative finance</span>,{" "}
+            <span style={{ color: "#FFFFFF" }}>backend engineering</span>, and
             algorithmic research. Focused on depth, rigor, and technical
             precision.
           </p>
@@ -192,7 +192,7 @@ export default function Hero() {
               gap: "32px",
               flexWrap: "wrap",
               paddingTop: "32px",
-              borderTop: "1px solid #1E293B",
+              borderTop: "1px solid #1C1C1C",
             }}
           >
             {[
@@ -207,13 +207,13 @@ export default function Hero() {
                     fontFamily: "'JetBrains Mono', monospace",
                     fontWeight: 700,
                     fontSize: "1.4rem",
-                    color: "#E2E8F0",
+                    color: "#FFFFFF",
                     letterSpacing: "-0.02em",
                   }}
                 >
                   {stat.value}
                 </div>
-                <div style={{ fontSize: "0.78rem", color: "#64748B", marginTop: "2px" }}>
+                <div style={{ fontSize: "0.78rem", color: "#6B7280", marginTop: "2px" }}>
                   {stat.label}
                 </div>
               </div>
@@ -230,7 +230,7 @@ export default function Hero() {
           bottom: "32px",
           left: "50%",
           transform: "translateX(-50%)",
-          color: "#475569",
+          color: "#6B7280",
           animation: "bounce 2s ease-in-out infinite",
           textDecoration: "none",
         }}
