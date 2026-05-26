@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { TrendingUp, ArrowRight, BookOpen } from "lucide-react";
+import { TrendingUp } from "lucide-react";
 import ProjectCard from "@/components/ProjectCard";
 import { getProjectsByCategory } from "@/lib/projects";
 

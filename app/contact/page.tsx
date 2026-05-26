@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { Mail, MapPin, Send } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "@/components/SocialIcons";
+import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -96,68 +97,7 @@ export default function ContactPage() {
               <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.7rem", color: "#6E8EAD", letterSpacing: "0.08em", marginBottom: "20px" }}>
                 SEND A MESSAGE
               </div>
-              <form
-                action={`mailto:${CONTACT.email}`}
-                method="GET"
-                id="contact-form"
-                style={{ display: "flex", flexDirection: "column", gap: "14px" }}
-              >
-                <div>
-                  <label style={{ display: "block", fontSize: "0.78rem", color: "#6B7280", marginBottom: "6px", fontFamily: "'JetBrains Mono', monospace" }}>
-                    NAME
-                  </label>
-                  <input
-                    id="contact-name"
-                    name="subject"
-                    type="text"
-                    placeholder="Your name"
-                    style={{
-                      width: "100%",
-                      padding: "10px 14px",
-                      background: "#111111",
-                      border: "1px solid #1C1C1C",
-                      borderRadius: "8px",
-                      color: "#FFFFFF",
-                      fontSize: "0.875rem",
-                      outline: "none",
-                      fontFamily: "'Inter', sans-serif",
-                      transition: "border-color 0.2s",
-                    }}
-                  />
-                </div>
-                <div>
-                  <label style={{ display: "block", fontSize: "0.78rem", color: "#6B7280", marginBottom: "6px", fontFamily: "'JetBrains Mono', monospace" }}>
-                    MESSAGE
-                  </label>
-                  <textarea
-                    id="contact-message"
-                    name="body"
-                    rows={5}
-                    placeholder="Your message..."
-                    style={{
-                      width: "100%",
-                      padding: "10px 14px",
-                      background: "#111111",
-                      border: "1px solid #1C1C1C",
-                      borderRadius: "8px",
-                      color: "#FFFFFF",
-                      fontSize: "0.875rem",
-                      outline: "none",
-                      resize: "vertical",
-                      fontFamily: "'Inter', sans-serif",
-                      transition: "border-color 0.2s",
-                    }}
-                  />
-                </div>
-                <button
-                  id="contact-submit"
-                  type="submit"
-                  className="btn-primary"
-                  style={{ justifyContent: "center" }}
-                >
-                  <Send size={14} /> Send Message
-                </button>
-              </form>
+              <ContactForm />
             </div>
           </div>
         </div>
