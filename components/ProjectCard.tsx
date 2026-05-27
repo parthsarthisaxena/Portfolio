@@ -29,7 +29,7 @@ export default function ProjectCard({
       tabIndex={0}
       onClick={() => router.push(`/projects/${project.slug}`)}
       onKeyDown={(e) => e.key === "Enter" && router.push(`/projects/${project.slug}`)}
-      style={{ textDecoration: "none", display: "block", cursor: "pointer" }}
+      style={{ textDecoration: "none", display: "block", cursor: "pointer", height: "100%" }}
     >
       <article
         className="card"
@@ -155,92 +155,97 @@ export default function ProjectCard({
         >
           {project.shortDescription}
         </p>
-
+ 
         {/* Metrics row (quant only) */}
-        {isQuant && project.metrics && (
-          <div
-            style={{
-              display: "flex",
-              gap: "16px",
-              marginBottom: "14px",
-              padding: "10px 12px",
-              background: "rgba(100,255,218,0.04)",
-              borderRadius: "6px",
-              border: "1px solid rgba(110, 142, 173,0.10)",
-              flexWrap: "wrap",
-            }}
-          >
-            {project.metrics.sharpeRatio !== undefined && (
-              <div>
-                <div
-                  style={{
-                    fontFamily: "'JetBrains Mono', monospace",
-                    fontSize: "0.9rem",
-                    fontWeight: 600,
-                    color: "#6E8EAD",
-                  }}
-                >
-                  {project.metrics.sharpeRatio}
+        {isQuant &&
+          project.metrics &&
+          (project.metrics.sharpeRatio !== undefined ||
+            project.metrics.maxDrawdown ||
+            project.metrics.winRate ||
+            project.metrics.annualizedReturn) && (
+            <div
+              style={{
+                display: "flex",
+                gap: "16px",
+                marginBottom: "14px",
+                padding: "10px 12px",
+                background: "rgba(100,255,218,0.04)",
+                borderRadius: "6px",
+                border: "1px solid rgba(110, 142, 173,0.10)",
+                flexWrap: "wrap",
+              }}
+            >
+              {project.metrics.sharpeRatio !== undefined && (
+                <div>
+                  <div
+                    style={{
+                      fontFamily: "'JetBrains Mono', monospace",
+                      fontSize: "0.9rem",
+                      fontWeight: 600,
+                      color: "#6E8EAD",
+                    }}
+                  >
+                    {project.metrics.sharpeRatio}
+                  </div>
+                  <div style={{ fontSize: "0.68rem", color: "#6B7280" }}>
+                    Sharpe
+                  </div>
                 </div>
-                <div style={{ fontSize: "0.68rem", color: "#6B7280" }}>
-                  Sharpe
+              )}
+              {project.metrics.maxDrawdown && (
+                <div>
+                  <div
+                    style={{
+                      fontFamily: "'JetBrains Mono', monospace",
+                      fontSize: "0.9rem",
+                      fontWeight: 600,
+                      color: "#F87171",
+                    }}
+                  >
+                    {project.metrics.maxDrawdown}
+                  </div>
+                  <div style={{ fontSize: "0.68rem", color: "#6B7280" }}>
+                    Max DD
+                  </div>
                 </div>
-              </div>
-            )}
-            {project.metrics.maxDrawdown && (
-              <div>
-                <div
-                  style={{
-                    fontFamily: "'JetBrains Mono', monospace",
-                    fontSize: "0.9rem",
-                    fontWeight: 600,
-                    color: "#F87171",
-                  }}
-                >
-                  {project.metrics.maxDrawdown}
+              )}
+              {project.metrics.winRate && (
+                <div>
+                  <div
+                    style={{
+                      fontFamily: "'JetBrains Mono', monospace",
+                      fontSize: "0.9rem",
+                      fontWeight: 600,
+                      color: "#A3E635",
+                    }}
+                  >
+                    {project.metrics.winRate}
+                  </div>
+                  <div style={{ fontSize: "0.68rem", color: "#6B7280" }}>
+                    Win Rate
+                  </div>
                 </div>
-                <div style={{ fontSize: "0.68rem", color: "#6B7280" }}>
-                  Max DD
+              )}
+              {project.metrics.annualizedReturn && (
+                <div>
+                  <div
+                    style={{
+                      fontFamily: "'JetBrains Mono', monospace",
+                      fontSize: "0.9rem",
+                      fontWeight: 600,
+                      color: "#6E8EAD",
+                    }}
+                  >
+                    {project.metrics.annualizedReturn}
+                  </div>
+                  <div style={{ fontSize: "0.68rem", color: "#6B7280" }}>
+                    Ann. Return
+                  </div>
                 </div>
-              </div>
-            )}
-            {project.metrics.winRate && (
-              <div>
-                <div
-                  style={{
-                    fontFamily: "'JetBrains Mono', monospace",
-                    fontSize: "0.9rem",
-                    fontWeight: 600,
-                    color: "#A3E635",
-                  }}
-                >
-                  {project.metrics.winRate}
-                </div>
-                <div style={{ fontSize: "0.68rem", color: "#6B7280" }}>
-                  Win Rate
-                </div>
-              </div>
-            )}
-            {project.metrics.annualizedReturn && (
-              <div>
-                <div
-                  style={{
-                    fontFamily: "'JetBrains Mono', monospace",
-                    fontSize: "0.9rem",
-                    fontWeight: 600,
-                    color: "#6E8EAD",
-                  }}
-                >
-                  {project.metrics.annualizedReturn}
-                </div>
-                <div style={{ fontSize: "0.68rem", color: "#6B7280" }}>
-                  Ann. Return
-                </div>
-              </div>
-            )}
-          </div>
-        )}
-
+              )}
+            </div>
+          )}
+ 
         {/* Tech stack */}
         <div style={{ display: "flex", flexWrap: "wrap", gap: "6px" }}>
           {project.techStack.slice(0, 4).map((tech) => (

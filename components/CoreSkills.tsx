@@ -1,24 +1,57 @@
 "use client";
 
 import AnimateIn from "@/components/AnimateIn";
+import { TrendingUp, Code2, Database, BarChart2 } from "lucide-react";
 
-const skills = [
-  { name: "C++", level: 88, color: "#6E8EAD" },
-  { name: "Python", level: 92, color: "#6E8EAD" },
-  { name: "Data Structures & Algorithms", level: 85, color: "#6E8EAD" },
-  { name: "Quantitative Research", level: 82, color: "#6E8EAD" },
-  { name: "Statistical Modeling", level: 80, color: "#6E8EAD" },
-  { name: "Backend Development", level: 78, color: "#6E8EAD" },
-  { name: "Backtesting & Simulation", level: 85, color: "#6E8EAD" },
-  { name: "REST APIs", level: 80, color: "#6E8EAD" },
-  { name: "SQL / Databases", level: 75, color: "#6E8EAD" },
-  { name: "Data Analysis & Visualization", level: 87, color: "#6E8EAD" },
-];
-
-const techBadges = [
-  "Python", "C++17", "NumPy", "pandas", "statsmodels",
-  "FastAPI", "Docker", "PostgreSQL","Framer Motion",
-  "scikit-learn", "Matplotlib", "CMake", "Git", "Linux",
+const skillGroups = [
+  {
+    label: "Quantitative",
+    icon: <TrendingUp size={13} />,
+    skills: [
+      "Statistical Arbitrage",
+      "Backtesting & Walk-Forward",
+      "Time-Series Analysis",
+      "Risk Modeling (VaR / CVaR)",
+      "Kalman Filtering",
+      "Market Regime Detection",
+    ],
+  },
+  {
+    label: "Engineering",
+    icon: <Code2 size={13} />,
+    skills: [
+      "C++",
+      "Python",
+      "Data Structures & Algorithms",
+      "FastAPI / REST",
+      "PostgreSQL / SQL",
+      "Docker",
+    ],
+  },
+  {
+    label: "Data & Research",
+    icon: <BarChart2 size={13} />,
+    skills: [
+      "NumPy / pandas",
+      "scikit-learn",
+      "Matplotlib / Plotly",
+      "statsmodels",
+      "Data Pipelines",
+      "Jupyter / Notebooks",
+    ],
+  },
+  {
+    label: "Infrastructure",
+    icon: <Database size={13} />,
+    skills: [
+      "Git / GitHub",
+      "Linux / Shell",
+      "CMake",
+      "Google Test",
+      "Redis",
+      "REST API Design",
+    ],
+  },
 ];
 
 export default function CoreSkills() {
@@ -27,7 +60,7 @@ export default function CoreSkills() {
       id="core-skills"
       style={{
         padding: "100px 0",
-        borderTop: "1px solid #1C1C1C",
+        borderTop: "1px solid #1E1E1E",
         backgroundColor: "#0A0A0A",
       }}
     >
@@ -37,13 +70,13 @@ export default function CoreSkills() {
           <div
             style={{
               fontFamily: "'JetBrains Mono', monospace",
-              fontSize: "0.75rem",
+              fontSize: "0.72rem",
               color: "#6E8EAD",
               letterSpacing: "0.1em",
               marginBottom: "12px",
             }}
           >
-            TECHNICAL FOUNDATION
+            TECHNICAL SKILLS
           </div>
           <h2
             style={{
@@ -58,91 +91,91 @@ export default function CoreSkills() {
             Core Skills
           </h2>
           <div className="section-divider" />
-          <p style={{ color: "#6B7280", fontSize: "0.9rem", marginTop: "14px", maxWidth: "500px" }}>
-            Depth across quantitative methods and engineering systems, with a
-            focus on performance and research rigor.
+          <p style={{ color: "#52525B", fontSize: "0.9rem", marginTop: "14px", maxWidth: "480px", lineHeight: 1.6 }}>
+            Depth across quantitative methods and engineering systems, built through self-study and hands-on projects.
           </p>
         </AnimateIn>
 
+        {/* Skill groups grid */}
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-            gap: "40px",
-            marginBottom: "56px",
+            gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+            gap: "20px",
+            marginBottom: "48px",
           }}
         >
-          {skills.map((skill) => (
-            <div key={skill.name}>
+          {skillGroups.map((group) => (
+            <div
+              key={group.label}
+              style={{
+                background: "#111111",
+                border: "1px solid #1E1E1E",
+                borderRadius: "12px",
+                padding: "22px",
+              }}
+            >
+              {/* Group header */}
               <div
                 style={{
                   display: "flex",
-                  justifyContent: "space-between",
                   alignItems: "center",
-                  marginBottom: "8px",
+                  gap: "7px",
+                  marginBottom: "18px",
+                  color: "#6E8EAD",
                 }}
               >
-                <span
-                  style={{
-                    fontSize: "0.875rem",
-                    fontWeight: 500,
-                    color: "#FFFFFF",
-                  }}
-                >
-                  {skill.name}
-                </span>
+                {group.icon}
                 <span
                   style={{
                     fontFamily: "'JetBrains Mono', monospace",
-                    fontSize: "0.75rem",
-                    color: "#6B7280",
+                    fontSize: "0.68rem",
+                    letterSpacing: "0.1em",
+                    color: "#6E8EAD",
                   }}
                 >
-                  {skill.level}%
+                  {group.label.toUpperCase()}
                 </span>
               </div>
-              <div className="skill-bar-track">
-                <div
-                  className="skill-bar-fill"
-                  style={{
-                    width: `${skill.level}%`,
-                    background: `linear-gradient(90deg, ${skill.color}, ${skill.color}88)`,
-                  }}
-                />
+
+              {/* Skills list */}
+              <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+                {group.skills.map((skill) => (
+                  <div
+                    key={skill}
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "10px",
+                      padding: "8px 12px",
+                      borderRadius: "6px",
+                      background: "#0A0A0A",
+                      border: "1px solid #1A1A1A",
+                    }}
+                  >
+                    <span
+                      style={{
+                        width: "5px",
+                        height: "5px",
+                        borderRadius: "50%",
+                        background: "#2E2E2E",
+                        flexShrink: 0,
+                      }}
+                    />
+                    <span
+                      style={{
+                        fontSize: "0.825rem",
+                        color: "#A1A1AA",
+                        fontWeight: 400,
+                      }}
+                    >
+                      {skill}
+                    </span>
+                  </div>
+                ))}
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Tech badge cloud */}
-        <div
-          style={{
-            borderTop: "1px solid #1C1C1C",
-            paddingTop: "36px",
-          }}
-        >
-          <div
-            style={{
-              fontFamily: "'JetBrains Mono', monospace",
-              fontSize: "0.72rem",
-              color: "#6B7280",
-              letterSpacing: "0.08em",
-              marginBottom: "16px",
-            }}
-          >
-            TECHNOLOGIES & TOOLS
-          </div>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
-            {techBadges.map((tech, i) => (
-              <span
-                key={tech}
-                className={i % 2 === 0 ? "tag" : "tag tag-blue"}
-                style={{ fontSize: "0.78rem" }}
-              >
-                {tech}
-              </span>
-            ))}
-          </div>
         </div>
       </div>
     </section>

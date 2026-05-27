@@ -58,10 +58,11 @@ export default function FeaturedProjects() {
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
             gap: "20px",
+            alignItems: "stretch",
           }}
         >
           {featured.map((project, i) => (
-            <AnimateIn key={project.slug} delay={i * 100}>
+            <AnimateIn key={project.slug} delay={i * 100} style={{ height: "100%" }}>
               <ProjectCard project={project} />
             </AnimateIn>
           ))}

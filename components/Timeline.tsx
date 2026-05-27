@@ -98,12 +98,12 @@ export default function Timeline() {
 
           <div style={{ display: "flex", flexDirection: "column", gap: "36px" }}>
             {timelineEvents.map((event, idx) => (
-              <AnimateIn key={idx} delay={idx * 80} direction="left">
+              <AnimateIn key={idx} delay={idx * 80} direction="left" style={{ position: "relative" }}>
                 {/* Dot */}
                 <div
                   style={{
                     position: "absolute",
-                    left: "-38px",
+                    left: "-35px",
                     top: "6px",
                     width: "12px",
                     height: "12px",

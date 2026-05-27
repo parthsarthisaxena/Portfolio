@@ -56,24 +56,7 @@ const journey = [
   },
 ];
 
-const skills = {
-  quant: [
-    { name: "Statistical Arbitrage", level: 90 },
-    { name: "Backtesting & Walk-Forward", level: 92 },
-    { name: "Time-Series Analysis", level: 85 },
-    { name: "Risk Modeling (VaR / CVaR)", level: 80 },
-    { name: "Kalman Filtering", level: 82 },
-    { name: "Market Regime Detection", level: 78 },
-  ],
-  engineering: [
-    { name: "C++", level: 88 },
-    { name: "Python", level: 93 },
-    { name: "Data Structures & Algorithms", level: 90 },
-    { name: "FastAPI / REST", level: 80 },
-    { name: "PostgreSQL / SQL", level: 75 },
-    { name: "Docker", level: 70 },
-  ],
-};
+
 
 export default function AboutPage() {
   return (
@@ -489,7 +472,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── Skills ───────────────────────────────────────────── */}
+      {/* ── Focus Areas ──────────────────────────────────────── */}
       <section
         style={{
           padding: "80px 0",
@@ -507,125 +490,172 @@ export default function AboutPage() {
               marginBottom: "40px",
             }}
           >
-            TECHNICAL SKILLS
+            RESEARCH INTERESTS & FOCUS AREAS
           </div>
 
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "1fr 1fr",
-              gap: "56px",
+              gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+              gap: "20px",
             }}
           >
-            {/* Quant */}
-            <div>
+            {/* Area 1: Algorithmic & Quantitative Math */}
+            <div className="card" style={{ padding: "28px 24px", display: "flex", flexDirection: "column", height: "100%" }}>
               <div
                 style={{
                   display: "flex",
                   alignItems: "center",
-                  gap: "8px",
-                  marginBottom: "24px",
+                  gap: "10px",
+                  marginBottom: "16px",
                 }}
               >
-                <TrendingUp size={15} color="#6E8EAD" />
-                <span
+                <div
                   style={{
-                    fontFamily: "'JetBrains Mono', monospace",
-                    fontSize: "0.7rem",
-                    color: "#6E8EAD",
-                    letterSpacing: "0.08em",
+                    width: "34px",
+                    height: "34px",
+                    borderRadius: "8px",
+                    background: "rgba(110, 142, 173, 0.1)",
+                    border: "1px solid rgba(110, 142, 173, 0.2)",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
                   }}
                 >
-                  QUANTITATIVE
-                </span>
+                  <TrendingUp size={16} color="#6E8EAD" />
+                </div>
+                <h3
+                  style={{
+                    fontFamily: "'Inter', sans-serif",
+                    fontWeight: 600,
+                    fontSize: "0.95rem",
+                    color: "#FFFFFF",
+                  }}
+                >
+                  Quantitative Modeling
+                </h3>
               </div>
-              <div style={{ display: "flex", flexDirection: "column", gap: "18px" }}>
-                {skills.quant.map((s) => (
-                  <div key={s.name}>
-                    <div
-                      style={{
-                        display: "flex",
-                        justifyContent: "space-between",
-                        marginBottom: "6px",
-                      }}
-                    >
-                      <span style={{ fontSize: "0.875rem", color: "#FFFFFF", fontWeight: 500 }}>
-                        {s.name}
-                      </span>
-                      <span
-                        style={{
-                          fontFamily: "'JetBrains Mono', monospace",
-                          fontSize: "0.72rem",
-                          color: "#6B7280",
-                        }}
-                      >
-                        {s.level}%
-                      </span>
-                    </div>
-                    <div className="skill-bar-track">
-                      <div className="skill-bar-fill" style={{ width: `${s.level}%` }} />
-                    </div>
-                  </div>
-                ))}
+              <p
+                style={{
+                  color: "#6B7280",
+                  fontSize: "0.82rem",
+                  lineHeight: 1.7,
+                  marginBottom: "18px",
+                }}
+              >
+                Analyzing market microstructure and statistical patterns to construct quantitative trading models. Focused on finding mathematical edges in historical data.
+              </p>
+              <div style={{ marginTop: "auto", display: "flex", flexWrap: "wrap", gap: "6px" }}>
+                <span className="tag" style={{ fontSize: "0.7rem" }}>Statistical Arbitrage</span>
+                <span className="tag" style={{ fontSize: "0.7rem" }}>Time-Series Analysis</span>
+                <span className="tag" style={{ fontSize: "0.7rem" }}>Risk Modeling (VaR)</span>
+                <span className="tag" style={{ fontSize: "0.7rem" }}>Kalman Filtering</span>
               </div>
             </div>
 
-            {/* Engineering */}
-            <div>
+            {/* Area 2: Systems Engineering */}
+            <div className="card" style={{ padding: "28px 24px", display: "flex", flexDirection: "column", height: "100%" }}>
               <div
                 style={{
                   display: "flex",
                   alignItems: "center",
-                  gap: "8px",
-                  marginBottom: "24px",
+                  gap: "10px",
+                  marginBottom: "16px",
                 }}
               >
-                <Code2 size={15} color="#6E8EAD" />
-                <span
+                <div
                   style={{
-                    fontFamily: "'JetBrains Mono', monospace",
-                    fontSize: "0.7rem",
-                    color: "#6E8EAD",
-                    letterSpacing: "0.08em",
+                    width: "34px",
+                    height: "34px",
+                    borderRadius: "8px",
+                    background: "rgba(110, 142, 173, 0.1)",
+                    border: "1px solid rgba(110, 142, 173, 0.2)",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
                   }}
                 >
-                  ENGINEERING
-                </span>
+                  <Code2 size={16} color="#6E8EAD" />
+                </div>
+                <h3
+                  style={{
+                    fontFamily: "'Inter', sans-serif",
+                    fontWeight: 600,
+                    fontSize: "0.95rem",
+                    color: "#FFFFFF",
+                  }}
+                >
+                  Systems Engineering
+                </h3>
               </div>
-              <div style={{ display: "flex", flexDirection: "column", gap: "18px" }}>
-                {skills.engineering.map((s) => (
-                  <div key={s.name}>
-                    <div
-                      style={{
-                        display: "flex",
-                        justifyContent: "space-between",
-                        marginBottom: "6px",
-                      }}
-                    >
-                      <span style={{ fontSize: "0.875rem", color: "#FFFFFF", fontWeight: 500 }}>
-                        {s.name}
-                      </span>
-                      <span
-                        style={{
-                          fontFamily: "'JetBrains Mono', monospace",
-                          fontSize: "0.72rem",
-                          color: "#6B7280",
-                        }}
-                      >
-                        {s.level}%
-                      </span>
-                    </div>
-                    <div className="skill-bar-track">
-                      <div
-                        className="skill-bar-fill"
-                        style={{
-                          width: `${s.level}%`,
-                          background: "linear-gradient(90deg, #6E8EAD, #6E8EAD88)",
-                        }}
-                      />
-                    </div>
-                  </div>
-                ))}
+              <p
+                style={{
+                  color: "#6B7280",
+                  fontSize: "0.82rem",
+                  lineHeight: 1.7,
+                  marginBottom: "18px",
+                }}
+              >
+                Writing low-latency, deterministic code to build fast execution systems and mathematical models. Focused on optimal data structures and robust system design.
+              </p>
+              <div style={{ marginTop: "auto", display: "flex", flexWrap: "wrap", gap: "6px" }}>
+                <span className="tag" style={{ fontSize: "0.7rem" }}>C++ (OOP & STL)</span>
+                <span className="tag" style={{ fontSize: "0.7rem" }}>Python (Pandas/NumPy)</span>
+                <span className="tag" style={{ fontSize: "0.7rem" }}>Data Structures & Algos</span>
+                <span className="tag" style={{ fontSize: "0.7rem" }}>System Performance</span>
+              </div>
+            </div>
+
+            {/* Area 3: Research Methodology */}
+            <div className="card" style={{ padding: "28px 24px", display: "flex", flexDirection: "column", height: "100%" }}>
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "10px",
+                  marginBottom: "16px",
+                }}
+              >
+                <div
+                  style={{
+                    width: "34px",
+                    height: "34px",
+                    borderRadius: "8px",
+                    background: "rgba(110, 142, 173, 0.1)",
+                    border: "1px solid rgba(110, 142, 173, 0.2)",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
+                >
+                  <BookOpen size={16} color="#6E8EAD" />
+                </div>
+                <h3
+                  style={{
+                    fontFamily: "'Inter', sans-serif",
+                    fontWeight: 600,
+                    fontSize: "0.95rem",
+                    color: "#FFFFFF",
+                  }}
+                >
+                  Backtesting & Execution
+                </h3>
+              </div>
+              <p
+                style={{
+                  color: "#6B7280",
+                  fontSize: "0.82rem",
+                  lineHeight: 1.7,
+                  marginBottom: "18px",
+                }}
+              >
+                Designing modular, zero-forward-bias simulation platforms. Rigorously testing hypothesis, managing transaction costs, and running walk-forward optimizations.
+              </p>
+              <div style={{ marginTop: "auto", display: "flex", flexWrap: "wrap", gap: "6px" }}>
+                <span className="tag" style={{ fontSize: "0.7rem" }}>Walk-Forward Validation</span>
+                <span className="tag" style={{ fontSize: "0.7rem" }}>Slippage & Fee Modeling</span>
+                <span className="tag" style={{ fontSize: "0.7rem" }}>Signal Research</span>
+                <span className="tag" style={{ fontSize: "0.7rem" }}>Post-Trade Analytics</span>
               </div>
             </div>
           </div>

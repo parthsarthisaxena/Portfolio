@@ -56,7 +56,7 @@ export const projects: Project[] = [
       backtestPeriod: "2020–2024",
       annualizedReturn: "14.7%",
     },
-    featured: true,
+    featured: false,
     tags: ["Kalman Filter", "Pairs Trading", "Cointegration", "Statistical Arbitrage"],
   },
   {
@@ -113,56 +113,8 @@ export const projects: Project[] = [
     featured: false,
     tags: ["Monte Carlo", "Risk Management", "VaR", "GBM", "Python"],
   },
-  {
-    slug: "market-regime-detection",
-    title: "Market Regime Detection",
-    category: "quant",
-    shortDescription:
-      "Hidden Markov Model-based regime classifier identifying bull, bear, and sideways market states for strategy switching.",
-    objective:
-      "Classify market regimes in real-time to dynamically enable/disable trading strategies based on market conditions.",
-    hypothesis:
-      "Markets exhibit distinct statistical regimes. Strategies conditioned on regime outperform unconditional approaches.",
-    methodology:
-      "Applied Gaussian HMM with 3 hidden states on daily S&P 500 returns. Features: returns, realized volatility, volume. Viterbi algorithm for state decoding. Regime signals used to gate other strategies.",
-    techStack: ["Python", "hmmlearn", "scikit-learn", "pandas", "matplotlib"],
-    results:
-      "Regime filter improved Sharpe of downstream strategies by 0.3–0.5 on average. Bear regime identified with 78% accuracy.",
-    limitations:
-      "HMM assumes Markov property (memoryless). Real markets exhibit longer-range dependencies.",
-    futureWork:
-      "Experiment with LSTM-based regime classification. Use options market data (VIX term structure) as additional features.",
-    metrics: {
-      backtestPeriod: "2015–2024",
-    },
-    featured: false,
-    tags: ["HMM", "Regime Detection", "Machine Learning", "Python"],
-  },
-  {
-    slug: "backtesting-engine",
-    title: "Vectorized Backtesting Engine",
-    category: "quant",
-    shortDescription:
-      "Custom backtesting framework built from scratch with vectorized execution, transaction costs, and walk-forward analysis.",
-    objective:
-      "Build a reusable, research-grade backtesting engine with realistic simulation of slippage, costs, and position limits.",
-    hypothesis:
-      "A properly implemented vectorized backtesting engine can run 10,000+ bars/sec while accurately modeling realistic execution.",
-    methodology:
-      "Event-driven architecture with vectorized signal generation. Realistic slippage model (fixed + proportional). Commission modeling. Walk-forward optimization to prevent in-sample overfitting.",
-    techStack: ["Python", "pandas", "NumPy", "matplotlib"],
-    results:
-      "Processes 50,000 bars/second in vectorized mode. Successfully reproduced published strategy results within 5% tolerance.",
-    limitations:
-      "Does not model order book depth or market impact for large positions.",
-    futureWork:
-      "Add order-book simulation. Build C++ core for 10x speed improvement.",
-    metrics: {
-      backtestPeriod: "Framework — not strategy-specific",
-    },
-    featured: false,
-    tags: ["Backtesting", "Framework", "Python", "Quantitative Finance"],
-  },
+
+  
   {
     slug: "intraday-breakout-scanner",
     title: "Intraday Breakout Scanner",
@@ -268,6 +220,36 @@ export const projects: Project[] = [
     featured: false,
     tags: ["Trade Journal", "Analytics", "Streamlit", "Python"],
   },
+  {
+    slug: "gsr-alpha",
+    title: "Gold–Silver Ratio (GSR) Mean-Reversion",
+    category: "quant",
+    shortDescription:
+      "Systematic mean-reversion trading model on MCX Gold/Silver futures, fully accounting for transaction costs, slippage, and progressive Indian tax slabs.",
+    objective:
+      "Develop a robust statistical arbitrage strategy capitalizing on macro-driven cointegration between gold and silver futures.",
+    hypothesis:
+      "Extremes in the Gold/Silver Ratio (GSR) tend to mean-revert due to shared macro drivers, allowing profitable exploitation through laggard-asset trading gated by realized volatility and VIX filters.",
+    methodology:
+      "Analyzed 10 years of daily precious metal data (May 2016 – May 2026). Constructed entry/exit thresholds based on a rolling 60-day GSR z-score (>= 1.5σ for entries, <= 0.3σ for exits). Implemented structural regime filters (VIX <= 50, rolling 60d correlation >= 0.5) to avoid crisis-period breakdowns. Modeled strict execution friction (MCX exchange fees, STT, bid-ask spreads, slippage) and progressive F&O business tax slabs under FY 2025-26 rules.",
+    techStack: ["Python", "pandas", "NumPy", "statsmodels", "yfinance", "matplotlib", "seaborn"],
+    results:
+      "Delivered a Net Return of +170.88% (Gross +216.11%) over a 10-year backtest. Achieved a Sharpe Ratio of 4.91, Calmar Ratio of 11.78, and a Max Drawdown of -14.50%. The strategy maintained a 63.2% win rate across 76 low-frequency trades.",
+    limitations:
+      "Susceptible to long-term structural shifts in the macro relationship between gold and silver. Low trade frequency requires long holding-period patience.",
+    futureWork:
+      "Incorporate dynamic scaling of entry thresholds using VIX term structures and option implied volatility skew.",
+    metrics: {
+      sharpeRatio: 4.91,
+      maxDrawdown: "14.50%",
+      winRate: "63.2%",
+      backtestPeriod: "2016–2026",
+      annualizedReturn: "10.5%",
+    },
+    githubUrl: "https://github.com/parthsarthisaxena/GSR-Alpha",
+    featured: true,
+    tags: ["Statistical Arbitrage", "Futures Trading", "Tax Modeling", "Python", "Backtesting"],
+  },
 
   // ─── ENGINEERING PROJECTS ────────────────────────────────────────────
   {
@@ -286,6 +268,27 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/parthsarthiisaxena/options-pricer-cpp",
     featured: false,
     tags: ["C++", "Options Pricing", "Black-Scholes", "Monte Carlo"],
+  },
+  {
+    slug: "roamcircle",
+    title: "RoamCircle Full-Stack Platform",
+    category: "engineering",
+    shortDescription:
+      "Secure, real-time travel companion matching platform with custom JWT auth, MongoDB databases, live chat systems, and automated OpenAI itineraries.",
+    objective:
+      "Build a high-performance full-stack social matching platform for travelers, motorcyclists, and hikers without relying on heavyweight frameworks.",
+    methodology:
+      "Developed a custom Node.js/Express backend server serving static files and API routes. Implemented secure JWT-based credentials storage with bcrypt hashing (12 salt rounds), utilizing httpOnly and SameSite cookie protocols to prevent CSRF and XSS. Designed a flexible MongoDB data architecture with collections for users, trips, matches, and messages. Integrated the OpenAI API to dynamically generate custom-tailored multi-day travel itineraries based on user travel parameters.",
+    techStack: ["Node.js", "Express", "MongoDB", "Mongoose", "JWT", "Bcrypt", "OpenAI API", "JavaScript (ES6+)", "HTML5", "CSS3"],
+    results:
+      "Successfully built and deployed a production-ready MVP. Achieved fast page responses and secure thread-safe user chat messaging. Implemented an interactive AI itinerary planner returning comprehensive travel guides under 3 seconds.",
+    limitations:
+      "Relies on standard long-polling HTTP requests for chat rather than WebSockets, which could affect real-time sync at scale.",
+    futureWork:
+      "Upgrade the communication channel to native WebSockets/Socket.io and integrate a mobile-responsive leaflet map interface.",
+    githubUrl: "https://github.com/parthsarthisaxena/RoamAround",
+    featured: true,
+    tags: ["Full Stack", "Node.js", "MongoDB", "JWT Auth", "OpenAI API", "Chat System"],
   },
 ];
 

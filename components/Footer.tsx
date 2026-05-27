@@ -25,15 +25,7 @@ export default function Footer() {
       }}
     >
       <div className="section-container">
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr auto",
-            gap: "32px",
-            alignItems: "start",
-            marginBottom: "32px",
-          }}
-        >
+        <div className="footer-grid">
           {/* Brand */}
           <div>
             <div
@@ -59,17 +51,10 @@ export default function Footer() {
               systems across finance and engineering.
             </div>
           </div>
-
+ 
           {/* Links */}
-          <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
-            <div
-              style={{
-                display: "flex",
-                gap: "20px",
-                flexWrap: "wrap",
-                justifyContent: "flex-end",
-              }}
-            >
+          <div className="footer-links-container">
+            <div className="footer-links-row">
               {[
                 { href: "/about", label: "About" },
                 { href: "/quant", label: "Quant" },
@@ -93,15 +78,9 @@ export default function Footer() {
                 </Link>
               ))}
             </div>
-
+ 
             {/* Social */}
-            <div
-              style={{
-                display: "flex",
-                gap: "14px",
-                justifyContent: "flex-end",
-              }}
-            >
+            <div className="footer-social-row">
               <a
                 href="https://github.com/parthsarthisaxena"
                 target="_blank"
@@ -196,7 +175,7 @@ export default function Footer() {
           0%, 100% { opacity: 1; }
           50% { opacity: 0.4; }
         }
-        a:hover { color: #FFFFFF !important; }
+        footer a:hover { color: #FFFFFF; }
       `}</style>
     </footer>
   );
