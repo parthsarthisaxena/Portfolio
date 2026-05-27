@@ -303,3 +303,4 @@ export function getProjectsByCategory(category: ProjectCategory): Project[] {
 export function getFeaturedProjects(): Project[] {
   return projects.filter((p) => p.featured);
 }
+//hi
