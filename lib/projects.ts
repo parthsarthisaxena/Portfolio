@@ -22,6 +22,7 @@ export interface Project {
   limitations?: string;
   futureWork?: string;
   metrics?: QuantMetrics;
+  highlights?: string[];   // 2-3 bullet facts shown on card
   githubUrl?: string;
   demoUrl?: string;
   featured: boolean;
@@ -265,6 +266,11 @@ export const projects: Project[] = [
     techStack: ["C++17", "CMake", "Boost", "Google Test"],
     results:
       "Black-Scholes pricing: 50M calculations/second on single core. Monte Carlo within 0.01% of analytical price at 100k paths.",
+    highlights: [
+      "50M Black-Scholes calcs / second",
+      "Monte Carlo accurate to 0.01% at 100k paths",
+      "Greeks via finite differencing",
+    ],
     githubUrl: "https://github.com/parthsarthiisaxena/options-pricer-cpp",
     featured: false,
     tags: ["C++", "Options Pricing", "Black-Scholes", "Monte Carlo"],
@@ -282,6 +288,11 @@ export const projects: Project[] = [
     techStack: ["Node.js", "Express", "MongoDB", "Mongoose", "JWT", "Bcrypt", "OpenAI API", "JavaScript (ES6+)", "HTML5", "CSS3"],
     results:
       "Successfully built and deployed a production-ready MVP. Achieved fast page responses and secure thread-safe user chat messaging. Implemented an interactive AI itinerary planner returning comprehensive travel guides under 3 seconds.",
+    highlights: [
+      "JWT auth with bcrypt (12 salt rounds) + httpOnly cookies",
+      "AI itinerary planner responds in under 3 seconds",
+      "Real-time chat with thread-safe MongoDB messaging",
+    ],
     limitations:
       "Relies on standard long-polling HTTP requests for chat rather than WebSockets, which could affect real-time sync at scale.",
     futureWork:

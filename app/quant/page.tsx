@@ -92,8 +92,8 @@ export default function QuantPage() {
           {/* Key metrics bar */}
           <div style={{ display: "flex", gap: "40px", flexWrap: "wrap" }}>
             {[
-              { val: "9", label: "Research Projects" },
-              { val: "3.5", label: "Peak Sharpe Ratio" },
+              { val: "8", label: "Research Projects" },
+              { val: "8.2", label: "Peak Sharpe Ratio" },
               { val: "2yr", label: "Backtest Depth" },
               { val: "Python", label: "Primary Stack" },
             ].map((m) => (

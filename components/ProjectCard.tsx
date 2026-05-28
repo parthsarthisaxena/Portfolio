@@ -150,12 +150,45 @@ export default function ProjectCard({
             fontSize: "0.85rem",
             lineHeight: 1.6,
             marginBottom: "16px",
-            flexGrow: 1,
+            flexGrow: project.highlights ? 0 : 1,
           }}
         >
           {project.shortDescription}
         </p>
- 
+
+        {/* Highlights — key facts strip */}
+        {project.highlights && project.highlights.length > 0 && (
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "6px",
+              marginBottom: "16px",
+              padding: "10px 12px",
+              background: "rgba(255,255,255,0.02)",
+              borderRadius: "6px",
+              border: "1px solid #1E1E1E",
+              flexGrow: 1,
+            }}
+          >
+            {project.highlights.map((h) => (
+              <div
+                key={h}
+                style={{
+                  display: "flex",
+                  alignItems: "flex-start",
+                  gap: "8px",
+                  fontSize: "0.78rem",
+                  color: "#A1A1AA",
+                  lineHeight: 1.5,
+                }}
+              >
+                <span style={{ color: "#6E8EAD", flexShrink: 0, marginTop: "1px" }}>›</span>
+                {h}
+              </div>
+            ))}
+          </div>
+        )}
         {/* Metrics row (quant only) */}
         {isQuant &&
           project.metrics &&

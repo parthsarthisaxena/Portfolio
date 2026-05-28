@@ -96,7 +96,7 @@ export default function ContactPage() {
             </p>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1.4fr", gap: "48px", alignItems: "start" }}>
+          <div className="contact-grid">
 
             {/* Left — Contact info */}
             <div>
@@ -171,7 +171,7 @@ export default function ContactPage() {
                 <form onSubmit={handleSubmit} id="contact-form" style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
 
                   {/* Name + Email row */}
-                  <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px" }}>
+                  <div className="contact-name-email-grid">
                     <div>
                       <label style={labelStyle}>NAME <span style={{ color: "#6E8EAD" }}>*</span></label>
                       <input
@@ -279,6 +279,29 @@ export default function ContactPage() {
         input::placeholder, textarea::placeholder { color: #3F3F46; }
         input:focus, textarea:focus { border-color: #2E2E2E !important; }
         @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+        .contact-grid {
+          display: grid;
+          grid-template-columns: 1fr 1.4fr;
+          gap: 48px;
+          align-items: start;
+        }
+        .contact-name-email-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 12px;
+        }
+
+        @media (max-width: 680px) {
+          .contact-grid {
+            grid-template-columns: 1fr;
+            gap: 36px;
+          }
+          .contact-name-email-grid {
+            grid-template-columns: 1fr;
+            gap: 14px;
+          }
+        }
       `}</style>
     </div>
   );

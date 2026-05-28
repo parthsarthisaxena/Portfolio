@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import { useEffect, useState } from "react";
 
 const GithubSvg = ({ size = 24, color = "#6B7280" }: { size?: number; color?: string }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill={color}>
@@ -10,21 +10,63 @@ const GithubSvg = ({ size = 24, color = "#6B7280" }: { size?: number; color?: st
 
 const GITHUB_USERNAME = "parthsarthisaxena";
 
-const stats = [
-  { label: "Public Repos", value: "18+", color: "#6E8EAD" },
-  { label: "Total Commits", value: "600+", color: "#6E8EAD" },
-  { label: "Stars Earned", value: "24", color: "#FBBF24" },
-  { label: "Pull Requests", value: "35+", color: "#4ADE80" },
-];
+interface GitHubData {
+  publicRepos: number;
+  followers: number;
+  totalStars: number;
+  topLangs: { name: string; pct: number }[];
+}
 
-const topLangs = [
-  { name: "Python", pct: 52 },
-  { name: "C++", pct: 28 },
-  { name: "TypeScript", pct: 12 },
-  { name: "SQL", pct: 8 },
-];
+// Skeleton pulse box
+function Skeleton({ w = "100%", h = "1.2rem" }: { w?: string; h?: string }) {
+  return (
+    <div
+      style={{
+        width: w,
+        height: h,
+        borderRadius: "4px",
+        background: "#1A1A1A",
+        animation: "skeleton-pulse 1.5s ease-in-out infinite",
+      }}
+    />
+  );
+}
+
+const LANG_COLORS: Record<string, string> = {
+  Python: "#3572A5",
+  "C++": "#f34b7d",
+  TypeScript: "#2b7489",
+  JavaScript: "#f1e05a",
+  SQL: "#e38c00",
+  C: "#555555",
+  Rust: "#dea584",
+  Go: "#00ADD8",
+};
 
 export default function GitHubActivity() {
+  const [data, setData] = useState<GitHubData | null>(null);
+  const [error, setError] = useState(false);
+
+  useEffect(() => {
+    fetch("/api/github")
+      .then((r) => r.json())
+      .then((d) => {
+        if (d.error) setError(true);
+        else setData(d);
+      })
+      .catch(() => setError(true));
+  }, []);
+
+  const stats = data
+    ? [
+        { label: "Public Repos", value: String(data.publicRepos), color: "#6E8EAD" },
+        { label: "Stars Earned", value: String(data.totalStars), color: "#FBBF24" },
+        { label: "Followers", value: String(data.followers), color: "#4ADE80" },
+      ]
+    : null;
+
+  const topLangs = data?.topLangs ?? [];
+
   return (
     <section
       id="github-activity"
@@ -56,11 +98,61 @@ export default function GitHubActivity() {
               GitHub Activity
             </h2>
             <GithubSvg size={24} color="#6B7280" />
+            {/* Live indicator */}
+            {data && (
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "5px",
+                  padding: "3px 10px",
+                  borderRadius: "999px",
+                  background: "rgba(74,222,128,0.08)",
+                  border: "1px solid rgba(74,222,128,0.18)",
+                }}
+              >
+                <span
+                  style={{
+                    width: "6px",
+                    height: "6px",
+                    borderRadius: "50%",
+                    background: "#4ADE80",
+                    display: "block",
+                    animation: "pulse 1.5s ease-in-out infinite",
+                  }}
+                />
+                <span
+                  style={{
+                    fontFamily: "'JetBrains Mono', monospace",
+                    fontSize: "0.65rem",
+                    color: "#4ADE80",
+                  }}
+                >
+                  LIVE
+                </span>
+              </div>
+            )}
           </div>
           <div className="section-divider" />
         </div>
 
-        {/* Stats grid */}
+        {error && (
+          <div
+            style={{
+              padding: "20px",
+              borderRadius: "8px",
+              background: "rgba(239,68,68,0.08)",
+              border: "1px solid rgba(239,68,68,0.2)",
+              color: "#F87171",
+              fontSize: "0.85rem",
+              marginBottom: "32px",
+              fontFamily: "'JetBrains Mono', monospace",
+            }}
+          >
+            Unable to load live GitHub data — showing cached values.
+          </div>
+        )}
+
         <div
           style={{
             display: "grid",
@@ -73,27 +165,62 @@ export default function GitHubActivity() {
           <div className="card" style={{ padding: "24px" }}>
             <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "20px" }}>
               <GithubSvg size={18} color="#6E8EAD" />
-              <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.72rem", color: "#6E8EAD", letterSpacing: "0.08em" }}>
+              <span
+                style={{
+                  fontFamily: "'JetBrains Mono', monospace",
+                  fontSize: "0.72rem",
+                  color: "#6E8EAD",
+                  letterSpacing: "0.08em",
+                }}
+              >
                 {GITHUB_USERNAME}
               </span>
             </div>
+
+            {/* Stat cells */}
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "14px" }}>
-              {stats.map((s) => (
-                <div
-                  key={s.label}
-                  style={{
-                    padding: "12px",
-                    background: "#0A0A0A",
-                    borderRadius: "8px",
-                    border: "1px solid #1C1C1C",
-                  }}
-                >
-                  <div style={{ fontFamily: "'JetBrains Mono', monospace", fontWeight: 700, fontSize: "1.2rem", color: s.color }}>
-                    {s.value}
-                  </div>
-                  <div style={{ fontSize: "0.72rem", color: "#6B7280", marginTop: "2px" }}>{s.label}</div>
-                </div>
-              ))}
+              {stats
+                ? stats.map((s) => (
+                    <div
+                      key={s.label}
+                      style={{
+                        padding: "12px",
+                        background: "#0A0A0A",
+                        borderRadius: "8px",
+                        border: "1px solid #1C1C1C",
+                      }}
+                    >
+                      <div
+                        style={{
+                          fontFamily: "'JetBrains Mono', monospace",
+                          fontWeight: 700,
+                          fontSize: "1.4rem",
+                          color: s.color,
+                        }}
+                      >
+                        {s.value}
+                      </div>
+                      <div style={{ fontSize: "0.72rem", color: "#6B7280", marginTop: "2px" }}>
+                        {s.label}
+                      </div>
+                    </div>
+                  ))
+                : Array.from({ length: 3 }).map((_, i) => (
+                    <div
+                      key={i}
+                      style={{
+                        padding: "12px",
+                        background: "#0A0A0A",
+                        borderRadius: "8px",
+                        border: "1px solid #1C1C1C",
+                      }}
+                    >
+                      <Skeleton w="60%" h="1.4rem" />
+                      <div style={{ marginTop: "6px" }}>
+                        <Skeleton w="80%" h="0.72rem" />
+                      </div>
+                    </div>
+                  ))}
             </div>
           </div>
 
@@ -110,61 +237,83 @@ export default function GitHubActivity() {
             >
               MOST USED LANGUAGES
             </div>
-            <div style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
-              {topLangs.map((lang) => (
-                <div key={lang.name}>
-                  <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "6px" }}>
-                    <span style={{ fontSize: "0.875rem", color: "#FFFFFF", fontWeight: 500 }}>{lang.name}</span>
-                    <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.72rem", color: "#6B7280" }}>
-                      {lang.pct}%
-                    </span>
-                  </div>
-                  <div className="skill-bar-track">
-                    <div
-                      className="skill-bar-fill"
-                      style={{ width: `${lang.pct}%` }}
-                    />
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
 
-        {/* Contribution graph — using ghchart.rshah.org which is more reliable */}
-        <div
-          className="card"
-          style={{ padding: "20px", overflow: "hidden", marginBottom: "24px" }}
-        >
-          <div
-            style={{
-              fontFamily: "'JetBrains Mono', monospace",
-              fontSize: "0.7rem",
-              color: "#6B7280",
-              letterSpacing: "0.08em",
-              marginBottom: "12px",
-            }}
-          >
-            CONTRIBUTION ACTIVITY
+            {topLangs.length > 0 ? (
+              <div style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
+                {topLangs.map((lang) => {
+                  const color = LANG_COLORS[lang.name] ?? "#6E8EAD";
+                  return (
+                    <div key={lang.name}>
+                      <div
+                        style={{
+                          display: "flex",
+                          justifyContent: "space-between",
+                          marginBottom: "6px",
+                        }}
+                      >
+                        <span
+                          style={{
+                            display: "flex",
+                            alignItems: "center",
+                            gap: "6px",
+                            fontSize: "0.875rem",
+                            color: "#FFFFFF",
+                            fontWeight: 500,
+                          }}
+                        >
+                          <span
+                            style={{
+                              width: "8px",
+                              height: "8px",
+                              borderRadius: "50%",
+                              background: color,
+                              flexShrink: 0,
+                            }}
+                          />
+                          {lang.name}
+                        </span>
+                        <span
+                          style={{
+                            fontFamily: "'JetBrains Mono', monospace",
+                            fontSize: "0.72rem",
+                            color: "#6B7280",
+                          }}
+                        >
+                          {lang.pct}%
+                        </span>
+                      </div>
+                      <div className="skill-bar-track">
+                        <div
+                          className="skill-bar-fill"
+                          style={{ width: `${lang.pct}%`, background: color }}
+                        />
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            ) : (
+              <div style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
+                {Array.from({ length: 4 }).map((_, i) => (
+                  <div key={i}>
+                    <div
+                      style={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        marginBottom: "6px",
+                      }}
+                    >
+                      <Skeleton w="40%" h="0.875rem" />
+                      <Skeleton w="20%" h="0.72rem" />
+                    </div>
+                    <div className="skill-bar-track">
+                      <Skeleton w="100%" h="100%" />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
-          <Image
-            src={`https://ghchart.rshah.org/64FFDA/${GITHUB_USERNAME}`}
-            alt="GitHub Contribution Graph"
-            width={800}
-            height={200}
-            style={{
-              width: "100%",
-              height: "auto",
-              display: "block",
-              filter: "brightness(0.9) saturate(1.2)",
-              borderRadius: "4px",
-            }}
-            onError={() => {
-              const img = document.getElementById("github-activity-graph") as HTMLImageElement | null;
-              if (img) img.style.display = "none";
-            }}
-            id="github-activity-graph"
-          />
         </div>
 
         <div style={{ textAlign: "center" }}>
@@ -181,6 +330,17 @@ export default function GitHubActivity() {
           </a>
         </div>
       </div>
+
+      <style>{`
+        @keyframes skeleton-pulse {
+          0%, 100% { opacity: 1; }
+          50% { opacity: 0.4; }
+        }
+        @keyframes pulse {
+          0%, 100% { opacity: 1; }
+          50% { opacity: 0.4; }
+        }
+      `}</style>
     </section>
   );
 }

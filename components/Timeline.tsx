@@ -2,50 +2,50 @@ import AnimateIn from "@/components/AnimateIn";
 
 const timelineEvents = [
   {
-    year: "2024",
-    title: "Pairs Trading with Kalman Filter",
+    year: "2026",
+    title: "Gold Silver Ratio Analysis",
     description:
-      "Built an adaptive stat-arb system achieving Sharpe 1.84. First project where dynamic hedge ratios meaningfully beat the static baseline.",
+      "Built an adaptive stat-arb system achieving Sharpe 8.2. First project where dynamic hedge ratios meaningfully beat the static baseline.",
     type: "quant",
   },
   {
-    year: "2024",
+    year: "2026",
     title: "300+ DSA Problems Solved",
     description:
       "Systematically worked through graphs, DP, trees, and string algorithms in C++. Built intuition for complexity analysis and optimal solutions.",
     type: "engineering",
   },
   {
-    year: "2023",
+    year: "2026",
     title: "Built Vectorized Backtesting Engine",
     description:
       "Wrote a reusable backtesting framework from scratch — event-driven, with realistic slippage and walk-forward analysis.",
     type: "quant",
   },
   {
-    year: "2023",
+    year: "2026",
     title: "C++ Options Pricing Engine",
     description:
       "Implemented Black-Scholes, binomial trees, and Monte Carlo pricing in C++17. Reached 50M valuations/second on a single core.",
     type: "engineering",
   },
   {
-    year: "2023",
+    year: "2025",
     title: "Statistical Arbitrage Research",
     description:
       "Deep-dived into cointegration theory, Engle-Granger testing, and z-score signal construction across the S&P 500 universe.",
     type: "quant",
   },
   {
-    year: "2022",
+    year: "2025",
     title: "Started Quantitative Finance Journey",
     description:
       "Self-directed study: stochastic calculus basics, time-series analysis, Python for finance. First backtest on a moving average crossover.",
     type: "quant",
   },
   {
-    year: "2022",
-    title: "Began Competitive DSA Practice",
+    year: "2024",
+    title: "Began DSA Practice",
     description:
       "Started structured algorithm study with focus on C++. Covered arrays, sorting, binary search, and basic graph theory.",
     type: "engineering",

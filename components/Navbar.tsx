@@ -57,37 +57,20 @@ export default function Navbar() {
             id="nav-logo"
             style={{ display: "flex", alignItems: "center", gap: "10px", textDecoration: "none" }}
           >
-            <div
-              style={{
-                width: "32px",
-                height: "32px",
-                borderRadius: "8px",
-                background: "#6E8EAD",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
+            <div className="nav-logo-icon">
               <span
                 style={{
                   fontFamily: "'JetBrains Mono', monospace",
                   fontSize: "12px",
-                  fontWeight: 700,
+                  fontWeight: 800,
                   color: "#FFFFFF",
+                  letterSpacing: "0.05em",
                 }}
               >
                 PS
               </span>
             </div>
-            <span
-              style={{
-                fontFamily: "'Inter', sans-serif",
-                fontWeight: 600,
-                fontSize: "0.9rem",
-                color: "#FFFFFF",
-                letterSpacing: "-0.01em",
-              }}
-            >
+            <span className="nav-logo-text">
               Parth Sarthi Saxena
             </span>
           </Link>
@@ -168,31 +151,39 @@ export default function Navbar() {
               </Link>
             );
           })}
-          <div style={{ display: "flex", gap: "12px", marginTop: "16px" }}>
-            <Link
-              href="/contact"
-              onClick={closeMenu}
-              style={{
-                flex: 1,
-                display: "flex",
-                justifyContent: "center",
-                padding: "10px",
-                borderRadius: "8px",
-                background: "#6E8EAD",
-                color: "#FFFFFF",
-                fontWeight: 600,
-                fontSize: "0.875rem",
-                textDecoration: "none",
-                border: "1px solid #6E8EAD",
-              }}
-            >
-              Contact
-            </Link>
-          </div>
         </div>
       )}
 
       <style>{`
+        .nav-logo-icon {
+          width: 32px;
+          height: 32px;
+          border-radius: 8px;
+          background: linear-gradient(135deg, #00F2FE 0%, #4FACFE 50%, #9B51E0 100%);
+          background-size: 200% 200%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+          box-shadow: 0 0 12px rgba(79, 172, 254, 0.3);
+        }
+        #nav-logo:hover .nav-logo-icon {
+          transform: rotate(8deg) scale(1.08);
+          background-position: right center;
+          box-shadow: 0 0 20px rgba(155, 81, 224, 0.6);
+        }
+        .nav-logo-text {
+          font-family: 'Inter', sans-serif;
+          font-weight: 600;
+          font-size: 0.9rem;
+          color: #FFFFFF;
+          letter-spacing: -0.01em;
+          transition: color 0.3s ease;
+        }
+        #nav-logo:hover .nav-logo-text {
+          color: #4FACFE;
+        }
+
         @media (max-width: 768px) {
           .hidden-mobile { display: none !important; }
           .show-mobile { display: flex !important; }

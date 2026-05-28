@@ -97,14 +97,7 @@ export default function AboutPage() {
             ABOUT ME
           </div>
 
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "1fr auto",
-              gap: "48px",
-              alignItems: "start",
-            }}
-          >
+          <div className="about-hero-grid">
             <div>
               <h1
                 style={{
@@ -179,7 +172,7 @@ export default function AboutPage() {
             </div>
 
             {/* Info card */}
-            <div style={{ minWidth: "210px" }}>
+            <div className="about-profile-card-wrap" style={{ minWidth: "210px" }}>
               <div
                 className="card"
                 style={{
@@ -212,7 +205,7 @@ export default function AboutPage() {
                   style={{
                     fontFamily: "'Inter', sans-serif",
                     fontWeight: 600,
-                    fontSize: "0.9rem",
+                    fontSize: "1.05rem",
                     color: "#FFFFFF",
                     textAlign: "center",
                     marginBottom: "4px",
@@ -222,7 +215,7 @@ export default function AboutPage() {
                 </div>
                 <div
                   style={{
-                    fontSize: "0.72rem",
+                    fontSize: "0.78rem",
                     color: "#6B7280",
                     fontFamily: "'JetBrains Mono', monospace",
                     textAlign: "center",
@@ -232,41 +225,56 @@ export default function AboutPage() {
                   ECE → Quant Developer
                 </div>
 
+                {/* Divider */}
+                <div style={{ height: "1px", background: "#1E1E1E", marginBottom: "16px" }} />
+
+                {/* Stat grid — 2 columns */}
                 <div
                   style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    gap: "10px",
-                    fontSize: "0.78rem",
+                    display: "grid",
+                    gridTemplateColumns: "1fr 1fr",
+                    gap: "8px",
                   }}
                 >
                   {[
-                    { label: "Degree", val: "B.Tech ECE" },
-                    { label: "College", val: "JECRC" },
-                    { label: "Batch", val: "2023 – 2027" },
-                    { label: "Location", val: "India" },
-                    { label: "Status", val: "Open to roles" },
-                    { label: "Stack", val: "C++ / Python" },
+                    { label: "Degree", val: "B.Tech ECE", accent: false },
+                    { label: "College", val: "JECRC", accent: false },
+                    { label: "Batch", val: "2023 – 2027", accent: false },
+                    { label: "Location", val: "India", accent: false },
+                    { label: "Status", val: "Open to roles", accent: true },
+                    { label: "Stack", val: "C++ / Python", accent: false },
                   ].map((row) => (
                     <div
                       key={row.label}
                       style={{
-                        display: "flex",
-                        justifyContent: "space-between",
-                        gap: "8px",
+                        background: "#0A0A0A",
+                        border: "1px solid #1A1A1A",
+                        borderRadius: "6px",
+                        padding: "8px 10px",
                       }}
                     >
-                      <span style={{ color: "#6B7280" }}>{row.label}</span>
-                      <span
+                      <div
                         style={{
-                          color: row.label === "Status" ? "#6E8EAD" : "#FFFFFF",
                           fontFamily: "'JetBrains Mono', monospace",
-                          fontSize: "0.7rem",
-                          textAlign: "right",
+                          fontSize: "0.6rem",
+                          color: "#52525B",
+                          letterSpacing: "0.06em",
+                          marginBottom: "3px",
+                        }}
+                      >
+                        {row.label.toUpperCase()}
+                      </div>
+                      <div
+                        style={{
+                          fontFamily: "'Inter', sans-serif",
+                          fontSize: "0.82rem",
+                          fontWeight: 500,
+                          color: row.accent ? "#6E8EAD" : "#FFFFFF",
+                          lineHeight: 1.3,
                         }}
                       >
                         {row.val}
-                      </span>
+                      </div>
                     </div>
                   ))}
                 </div>
@@ -721,6 +729,31 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+      <style>{`
+        .about-hero-grid {
+          display: grid;
+          grid-template-columns: 1fr auto;
+          gap: 48px;
+          align-items: start;
+        }
+        .about-profile-card-wrap {
+          min-width: 210px;
+        }
+        @media (max-width: 680px) {
+          .about-hero-grid {
+            grid-template-columns: 1fr;
+            gap: 32px;
+          }
+          .about-hero-grid > .about-profile-card-wrap {
+            order: -1;
+            min-width: unset;
+            width: 100%;
+          }
+          .about-profile-card-wrap .card {
+            width: 100%;
+          }
+        }
+      `}</style>
     </div>
   );
 }
