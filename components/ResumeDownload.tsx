@@ -1,4 +1,4 @@
-import { Download, TrendingUp, Code2 } from "lucide-react";
+import { ExternalLink, TrendingUp, Code2 } from "lucide-react";
 
 export default function ResumeDownload() {
   return (
@@ -32,7 +32,7 @@ export default function ResumeDownload() {
               letterSpacing: "-0.02em",
             }}
           >
-            Download Resume
+            View Resume
           </h2>
           <p style={{ color: "#6B7280", fontSize: "0.9rem", marginTop: "12px" }}>
             Two tailored resumes — one for each career path.
@@ -88,14 +88,15 @@ export default function ResumeDownload() {
               modeling, and algorithmic strategies.
             </p>
             <a
-              href="/resumes/quant-resume.pdf"
-              id="download-quant-resume"
-              download
+              href="https://drive.google.com/file/d/140X9zqKOs7HilLGdVkw_kJLhkwOwgly6/view?usp=drivesdk"
+              id="view-quant-resume"
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-primary"
               style={{ justifyContent: "center" }}
             >
-              <Download size={14} />
-              Download PDF
+              <ExternalLink size={14} />
+              View Resume
             </a>
           </div>
 
@@ -139,14 +140,15 @@ export default function ResumeDownload() {
               engineering projects.
             </p>
             <a
-              href="/resumes/sde-resume.pdf"
-              id="download-sde-resume"
-              download
+              href="https://drive.google.com/file/d/1Nglko5VzNcxmEO5ar8YoQX6Owd14TLbS/view?usp=drivesdk"
+              id="view-sde-resume"
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-secondary"
               style={{ justifyContent: "center" }}
             >
-              <Download size={14} />
-              Download PDF
+              <ExternalLink size={14} />
+              View Resume
             </a>
           </div>
         </div>
